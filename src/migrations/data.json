@@ -1,0 +1,3976 @@
+[
+  {
+    "name": "Thực phẩm",
+    "children": [
+      {
+        "name": "Trái cây",
+        "children": [
+          {
+            "name": "Trái cây nội địa"
+          },
+          {
+            "name": "Trái cây nhập khẩu"
+          }
+        ]
+      },
+      {
+        "name": "Thịt, Trứng",
+        "children": [
+          {
+            "name": "Thit heo, lợn"
+          },
+          {
+            "name": "Thịt bò, bê"
+          },
+          {
+            "name": "Thịt gà, vịt, chim"
+          },
+          {
+            "name": "Thịt đông lạnh"
+          },
+          {
+            "name": "Các loại thịt khác"
+          },
+          {
+            "name": "Trứng gà, vịt, cút"
+          },
+          {
+            "name": "Thịt bò, bê"
+          }
+        ]
+      },
+      {
+        "name": "Cá, thủy hải sản",
+        "children": [
+          {
+            "name": "Tôm, cua, ghẹ, ốc"
+          },
+          {
+            "name": "Cá, hải sản đông lạnh"
+          },
+          {
+            "name": "Cá khô, tôm, mực khô"
+          },
+          {
+            "name": "Thuỷ hải sản chế biến"
+          },
+          {
+            "name": "Thuỷ hải sản khác"
+          }
+        ]
+      },
+      {
+        "name": "Rau củ quả",
+        "children": [
+          {
+            "name": "Rau xanh, rau tươi"
+          },
+          {
+            "name": "Củ, quả, măng tươi"
+          },
+          {
+            "name": "Hành, ỏi, ớt, rau thơm"
+          },
+          {
+            "name": "Nấm, hạt các loại"
+          },
+          {
+            "name": "Combo rau củ"
+          }
+        ]
+      },
+      {
+        "name": "Thực phẩm Việt",
+        "children": [
+          {
+            "name": "Dưa muối, đồ chua, mắm"
+          },
+          {
+            "name": "Lạp xưởng, thịt khô, nem"
+          },
+          {
+            "name": "Xôi, chè, bánh các loại"
+          },
+          {
+            "name": "Đậu hũ, thực phẩm khác"
+          },
+          {
+            "name": "Đặc sản vùng miền"
+          },
+          {
+            "name": "Đồ chế biến sẵn"
+          }
+        ]
+      },
+      {
+        "name": "Sữa, bơ, phomai",
+        "children": [
+          {
+            "name": "Sữa tươi, sữa trái cây"
+          },
+          {
+            "name": "Sữa đậu nành, ngũ cốc"
+          },
+          {
+            "name": "Sữa đặc, sữa bột"
+          },
+          {
+            "name": "Sữa chua, phomai"
+          },
+          {
+            "name": "Kem cây, kem hộp"
+          },
+          {
+            "name": "Bơ, magarine"
+          }
+        ]
+      },
+      {
+        "name": "Đông lạnh, mát",
+        "children": [
+          {
+            "name": "Thịt, hải sản đông lạnh"
+          },
+          {
+            "name": "Rau củ quả đông lạnh"
+          },
+          {
+            "name": "Xúc xích, pate, giò chả"
+          },
+          {
+            "name": "Pizza, mì, cơm đông lạnh"
+          }
+        ]
+      },
+      {
+        "name": "Dầu ăn, gia vị",
+        "children": [
+          {
+            "name": "Dầu ăn, dầu oliu"
+          },
+          {
+            "name": "Nước tương, nước mắm"
+          },
+          {
+            "name": "Tương ớt, tương cà, mù tạt"
+          },
+          {
+            "name": "Muối, hạt nêm, gia vị"
+          },
+          {
+            "name": "Đường cát, đường phèn"
+          },
+          {
+            "name": "Sốt tẩm ướt, sốt nêm"
+          },
+          {
+            "name": "Giấm, rượu nấu ăn"
+          },
+          {
+            "name": "Tiêu, ớt, hương liệu khô"
+          },
+          {
+            "name": "Nguyên liệu làm bánh"
+          },
+          {
+            "name": "Nguyên liệu nấu ăn khác"
+          }
+        ]
+      },
+      {
+        "name": "Gạo, mì, nông sản",
+        "children": [
+          {
+            "name": "Gạo, nếp, đậu"
+          },
+          {
+            "name": "Bột gạo, mì, bột chiên"
+          },
+          {
+            "name": "Mì ăn liền, phở, cháo"
+          },
+          {
+            "name": "Mì, bún khô, bánh tráng"
+          },
+          {
+            "name": "Rong biển, nấm, măng khô"
+          },
+          {
+            "name": "Nông sản khô các loại"
+          }
+        ]
+      },
+      {
+        "name": "Đồ hộp, đóng gói",
+        "children": [
+          {
+            "name": "Thịt hộp, cá hộp"
+          },
+          {
+            "name": "Rau củ, trái cây hộp"
+          },
+          {
+            "name": "Mật ong, mứt, cốt dừa"
+          },
+          {
+            "name": "Đồ bổ dưỡng, hữu cơ"
+          }
+        ]
+      },
+      {
+        "name": "Bia, đồ uống",
+        "children": [
+          {
+            "name": "Bia, Cider"
+          },
+          {
+            "name": "Rượu vang, rượu trái cây"
+          },
+          {
+            "name": "Nước khoáng, nước suối"
+          },
+          {
+            "name": "Nước ngọt, có ga, tonic"
+          },
+          {
+            "name": "Siro, nguyên liệu pha chế"
+          },
+          {
+            "name": "Trà khô, trà đóng chai"
+          },
+          {
+            "name": "Cà phê hạt, đóng chai"
+          },
+          {
+            "name": "Nước trái cây, thể thao"
+          }
+        ]
+      },
+      {
+        "name": "Thực phẩm chay",
+        "children": [
+          {
+            "name": "Đồ chay khô, đóng hộp"
+          }
+        ]
+      },
+      {
+        "name": "Dành cho trẻ em",
+        "children": [
+          {
+            "name": "Sữa cho trẻ em"
+          },
+          {
+            "name": "Gia vị, bánh kẹo trẻ em"
+          }
+        ]
+      },
+      {
+        "name": "Bánh kẹo, giỏ quà",
+        "children": [
+          {
+            "name": "Bánh quy, bánh ngọt"
+          },
+          {
+            "name": "Socola, kẹo, ngũ cốc"
+          },
+          {
+            "name": "Củ qủa sấy, mứt, omai"
+          },
+          {
+            "name": "Bimbim, snack, khoai tây"
+          },
+          {
+            "name": "Giỏ quà, bánh theo mùa"
+          }
+        ]
+      },
+      {
+        "name": "Thức ăn, đồ thú cưng",
+        "children": [
+          {
+            "name": "Thức ăn cho chó, mèo"
+          },
+          {
+            "name": "Đồ cho chó mèo, thú cưng"
+          }
+        ]
+      },
+      {
+        "name": "Chăm sóc nhà cửa",
+        "children": [
+          {
+            "name": "Hoa tươi, hoa chậu"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Đồ chơi - Mẹ & Bé",
+    "children": [
+      {
+        "name": "Tã, bỉm",
+        "children": [
+          {
+            "name": "Tã dán"
+          },
+          {
+            "name": "Miếng lót sơ sinh"
+          },
+          {
+            "name": "Tã quần"
+          },
+          {
+            "name": "Tã giấy"
+          },
+          {
+            "name": "Tã vải"
+          },
+          {
+            "name": "Tã bỉm dành cho người lớn"
+          },
+          {
+            "name": "khăn giấy ướt dành cho bé"
+          }
+        ]
+      },
+      {
+        "name": "Dinh dưỡng cho bé",
+        "children": [
+          {
+            "name": "Sữa bột cho bé"
+          },
+          {
+            "name": "Sữa công thức pha sẵn"
+          },
+          {
+            "name": "Bột ăn dặm"
+          },
+          {
+            "name": "vitamins"
+          },
+          {
+            "name": "Nước trá cây cho bé"
+          },
+          {
+            "name": "Bánh ăn dặm"
+          },
+          {
+            "name": "Bánh quy"
+          },
+          {
+            "name": "thực phẩm chế biến sẵn"
+          },
+          {
+            "name": "Dầu ăn cho bé"
+          },
+          {
+            "name": "Trà và thức uống cho bé"
+          }
+        ]
+      },
+      {
+        "name": "Thức phẩm ăn dặm"
+      },
+      {
+        "name": "Dinh dưỡng cho mẹ"
+      },
+      {
+        "name": "Dinh dưỡng cho người lớn"
+      },
+      {
+        "name": "Đồ dùng cho bé",
+        "children": [
+          {
+            "name": "Đồ dùng ăn uống cho bé"
+          },
+          {
+            "name": "Đồ dùng vệ sinh cho bé"
+          },
+          {
+            "name": "Đồ dùng phòng ngủ cho bé"
+          },
+          {
+            "name": "Đồ dùng bảo vệ bé"
+          },
+          {
+            "name": "Dung cụ chăm sóc sức khỏe"
+          },
+          {
+            "name": "Đồ dùng đi chơi"
+          }
+        ]
+      },
+      {
+        "name": "Thời trang cho mẹ & bé",
+        "children": [
+          {
+            "name": "Thời trang bầu"
+          },
+          {
+            "name": "Thời trang sơ sinh"
+          },
+          {
+            "name": "Thời trang bé gái"
+          },
+          {
+            "name": "Thời trang bé trai"
+          },
+          {
+            "name": "Phụ kiện cho bé"
+          }
+        ]
+      },
+      {
+        "name": "Đồ chơi",
+        "children": [
+          {
+            "name": "Lắp ghép, xếp hình"
+          },
+          {
+            "name": "Đò chơi điệu khiển"
+          },
+          {
+            "name": "Búp bê, thú bông"
+          },
+          {
+            "name": "Đố chơi gỗ"
+          },
+          {
+            "name": "Đồ chơi mô hình"
+          },
+          {
+            "name": "Đồ chơi thủ công"
+          },
+          {
+            "name": "Đồ chơi nhạc cụ"
+          },
+          {
+            "name": "Bộ nặn, cát nặn"
+          },
+          {
+            "name": "Boardgame"
+          },
+          {
+            "name": "Cờ"
+          },
+          {
+            "name": "Lều chơi sơ sinh"
+          },
+          {
+            "name": "Đồ chơi ảo thuật"
+          },
+          {
+            "name": "Trò chơi dân gian"
+          },
+          {
+            "name": "Trò chơi trí tuệ"
+          },
+          {
+            "name": "Video games"
+          },
+          {
+            "name": "Đồ chơi vận  động"
+          },
+          {
+            "name": "Đồ chơi giáo dục"
+          }
+        ]
+      },
+      {
+        "name": "Chăm sóc mẹ mang thai, sau sinh",
+        "children": [
+          {
+            "name": "Máy hút sữa, túi trữ sữa"
+          },
+          {
+            "name": "Đai đỡ bụng bầu"
+          },
+          {
+            "name": "Đai nịt bụng, quần tạo dáng sau sinh"
+          },
+          {
+            "name": "Dung dịch tắm gội, chăm sóc da"
+          },
+          {
+            "name": "Phương pháp dân gian"
+          },
+          {
+            "name": "Phụ cho mẹ"
+          }
+        ]
+      },
+      {
+        "name": "Chuẩn bị mang thai",
+        "children": [
+          {
+            "name": "Que thử thai"
+          }
+        ]
+      },
+      {
+        "name": "Chăm sóc nhà cửa",
+        "children": [
+          {
+            "name": "Vệ sinh nhà cửa"
+          },
+          {
+            "name": "Vệ sinh nhà bếp"
+          },
+          {
+            "name": "Vệ sinh nhà tắm"
+          },
+          {
+            "name": "Khăn giấy"
+          },
+          {
+            "name": "Giật giũ chăm sóc quần áo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Điện thoại - Máy tính bảng",
+    "children": [
+      {
+        "name": "Điện thoại Smartphone"
+      },
+      {
+        "name": "Máy tính bảng"
+      },
+      {
+        "name": "Máy đọc sách"
+      },
+      {
+        "name": "Điện thoại phổ thông"
+      },
+      {
+        "name": "Điện thoại bàn"
+      }
+    ]
+  },
+  {
+    "name": "Làm đẹp - Sức khỏe",
+    "children": [
+      {
+        "name": "Chăm sóc da mặt",
+        "children": [
+          {
+            "name": "Làm sạch da mặt"
+          },
+          {
+            "name": "Mặt nạ"
+          },
+          {
+            "name": "Xịt khoáng"
+          },
+          {
+            "name": "Chăm sóc vùng da mặt"
+          },
+          {
+            "name": "Trang điểm"
+          },
+          {
+            "name": "Nước hoa hồng, toner"
+          },
+          {
+            "name": "Kem chống nắng"
+          },
+          {
+            "name": "Sản phẩm trị mụn"
+          },
+          {
+            "name": "Kem và sữa dưỡng da"
+          },
+          {
+            "name": "Sản phẩm chăm sóc da mặt khác"
+          },
+          {
+            "name": "Bộ chăm sóc da mặt"
+          },
+          {
+            "name": "Sữa rửa mặt"
+          },
+          {
+            "name": "Tẩy tế bào chết"
+          },
+          {
+            "name": "Tẩy trang"
+          },
+          {
+            "name": "Chống lão hóa"
+          }
+        ]
+      },
+      {
+        "name": "Trang điểm",
+        "children": [
+          {
+            "name": "Dụng cụ trang điểm"
+          },
+          {
+            "name": "Trang điểm mặt"
+          },
+          {
+            "name": "Trang điểm mắt"
+          },
+          {
+            "name": "Son & Trang điểm môi"
+          },
+          {
+            "name": "Bộ trang điểm"
+          }
+        ]
+      },
+      {
+        "name": "Chăm sóc cá nhân",
+        "children": [
+          {
+            "name": "Chăm sóc răng miệng"
+          },
+          {
+            "name": "Dung dịch vệ sinh"
+          },
+          {
+            "name": "Sản phẩm chăm sóc cá nhân khác"
+          },
+          {
+            "name": "Bọt cạo râu"
+          },
+          {
+            "name": "Băng vệ sinh"
+          },
+          {
+            "name": "Khăn giấy ướt"
+          }
+        ]
+      },
+      {
+        "name": "Chăm sóc cơ thể",
+        "children": [
+          {
+            "name": "Bộ chăm sóc toàn thân"
+          },
+          {
+            "name": "Chăm sóc ngực"
+          },
+          {
+            "name": "Dưỡng thể"
+          },
+          {
+            "name": "Kem tan mỡ"
+          },
+          {
+            "name": "Massage toàn thân"
+          },
+          {
+            "name": "Sản phẩm khử mùi"
+          },
+          {
+            "name": "Sản phẩm tẩy lông"
+          },
+          {
+            "name": "Sữa tắm, xà bông, muối tắm"
+          },
+          {
+            "name": "Sản phẩm chống nắng"
+          },
+          {
+            "name": "Tẩy tế bào chết, massage"
+          },
+          {
+            "name": "Trị rạn nứt da"
+          },
+          {
+            "name": "Sản phẩm sạch khuẩn"
+          },
+          {
+            "name": "Sản phẩm chăm sóc cơ thể khác"
+          },
+          {
+            "name": "sản phẩm dưỡng tay, chân"
+          },
+          {
+            "name": "Bộ chăm sóc cơ thể"
+          },
+          {
+            "name": "Bộ chăm sóc tóc và da đầu"
+          }
+        ]
+      },
+      {
+        "name": "Dược mỹ phẩm"
+      },
+      {
+        "name": "Sản phẩm thiên nhiên & Khác",
+        "children": [
+          {
+            "name": "Tinh dầu"
+          },
+          {
+            "name": "Nến thơm"
+          },
+          {
+            "name": "Sản phẩm thiên nhiên làm đẹp"
+          },
+          {
+            "name": "Đèn xông"
+          }
+        ]
+      },
+      {
+        "name": "Chăm sóc tóc và da đầu",
+        "children": [
+          {
+            "name": "Dầu gội, dầu xả"
+          },
+          {
+            "name": "Tạo kiểu tóc"
+          },
+          {
+            "name": "Thuốc nhuộm tóc"
+          },
+          {
+            "name": "Thuốc duỗi, uốn"
+          },
+          {
+            "name": "Dưỡng tóc, ủ tóc"
+          },
+          {
+            "name": "Bộ chăm sóc tóc"
+          }
+        ]
+      },
+      {
+        "name": "Nước hoa",
+        "children": [
+          {
+            "name": "Nước hoa nữ"
+          },
+          {
+            "name": "Nước hoa nam"
+          }
+        ]
+      },
+      {
+        "name": "Dụng cụ làm đẹp",
+        "children": [
+          {
+            "name": "Dụng cụ làm đẹp khác"
+          },
+          {
+            "name": "Dụng cụ tẩy lông"
+          },
+          {
+            "name": "Massage thư giãn và làm đẹp"
+          },
+          {
+            "name": "Máy xông da mặt"
+          },
+          {
+            "name": "Sản phẩm định hình"
+          },
+          {
+            "name": "Dao - Máy cạo râu & Hớt tóc"
+          },
+          {
+            "name": "Máy & Dụng cụ rửa mặt"
+          },
+          {
+            "name": "Máy hút mụn"
+          },
+          {
+            "name": "Chăm sóc móng"
+          }
+        ]
+      },
+      {
+        "name": "Máy Massage & Thiết bị chăm sóc sức khỏe",
+        "children": [
+          {
+            "name": "Cân sức khỏe"
+          },
+          {
+            "name": "Dụng cụ theo dõi sức khỏe"
+          },
+          {
+            "name": "Máy massage toàn thân"
+          },
+          {
+            "name": "Nhiệt kế"
+          },
+          {
+            "name": "Máy xông mũi họng"
+          },
+          {
+            "name": "Que thử thai"
+          },
+          {
+            "name": "Thiết bị Y Tế"
+          },
+          {
+            "name": "Thiết bị khác"
+          },
+          {
+            "name": "Túi chườm"
+          },
+          {
+            "name": "Máy đo bước"
+          },
+          {
+            "name": "Dụng cụ sơ cứu"
+          },
+          {
+            "name": "Vớ ngăn giãn tĩnh mạch"
+          },
+          {
+            "name": "Băng keo cá nhân"
+          },
+          {
+            "name": "Khẩu trang y tế"
+          },
+          {
+            "name": "Chăm sóc mắt"
+          }
+        ]
+      },
+      {
+        "name": "Thực phẩm chức năng",
+        "children": [
+          {
+            "name": "Thực phẩm chức năng làm đẹp"
+          },
+          {
+            "name": "Thực phẩm chức năng sức khỏe"
+          },
+          {
+            "name": "Thực phẩm chức năng thiên nhiên"
+          },
+          {
+            "name": "Kiểm soát cân nặng"
+          }
+        ]
+      },
+      {
+        "name": "Hỗ trợ tình dục",
+        "children": [
+          {
+            "name": "Bao cao su"
+          },
+          {
+            "name": "Gel bôi trơn"
+          }
+        ]
+      },
+      {
+        "name": "Bộ sản phẩm làm đẹp"
+      }
+    ]
+  },
+  {
+    "name": "Điện gia dụng",
+    "children": [
+      {
+        "name": "Đồ dùng nhà bếp",
+        "children": [
+          {
+            "name": "Nồi điện các loại"
+          },
+          {
+            "name": "Bếp các loại"
+          },
+          {
+            "name": "Máy hút khói, khử mùi"
+          },
+          {
+            "name": "Lò vi sóng"
+          },
+          {
+            "name": "Lò nướng điện"
+          },
+          {
+            "name": "Vỉ nướng điện"
+          },
+          {
+            "name": "Máy Xay, Máy ép"
+          },
+          {
+            "name": "Bình đun siêu tốc"
+          },
+          {
+            "name": "Bình thủy điện"
+          },
+          {
+            "name": "Máy pha cà phê"
+          },
+          {
+            "name": "Máy làm kem"
+          },
+          {
+            "name": "Máy làm sữa đậu nành"
+          },
+          {
+            "name": "Máy làm sữa chua"
+          },
+          {
+            "name": "Máy làm mì sợi"
+          },
+          {
+            "name": "Máy làm bánh"
+          },
+          {
+            "name": "Siêu sắc thuốc"
+          },
+          {
+            "name": "Máy làm tỏi đen"
+          },
+          {
+            "name": "Máy sấy chén"
+          },
+          {
+            "name": "Máy sấy thực phẩm"
+          },
+          {
+            "name": "Máy hút chân không"
+          },
+          {
+            "name": "Máy hàn miệng túi"
+          },
+          {
+            "name": "Máy cắt thịt đong lạnh"
+          },
+          {
+            "name": "Máy dùng nhà bếp khác"
+          },
+          {
+            "name": "Máy đánh trứng"
+          }
+        ]
+      },
+      {
+        "name": "thiết bị gia đình",
+        "children": [
+          {
+            "name": "Bàn ủi, bàn là"
+          },
+          {
+            "name": "Máy may, thêu, vất sổ"
+          },
+          {
+            "name": "Quạt điện"
+          },
+          {
+            "name": "Máy hút bụi"
+          },
+          {
+            "name": "Cây nước Nóng lạnh"
+          },
+          {
+            "name": "Máy lọng không khí"
+          },
+          {
+            "name": "Máy tạo ẩm"
+          },
+          {
+            "name": "Máy hút ẩm"
+          },
+          {
+            "name": "Máy lọc nước"
+          },
+          {
+            "name": "Máy sấy quần áo"
+          },
+          {
+            "name": "Máy sấy tay"
+          },
+          {
+            "name": "Thiết bị sưởi ấm"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thời trang nữ",
+    "children": [
+      {
+        "name": "Áo nữ",
+        "children": [
+          {
+            "name": "Áo sơ mi nữ"
+          },
+          {
+            "name": "Áo sơ mi nữ"
+          },
+          {
+            "name": "Áo kiểu"
+          },
+          {
+            "name": "Áo crop-top"
+          },
+          {
+            "name": "Áo hai dây - Áo ba lô nữ"
+          }
+        ]
+      },
+      {
+        "name": "Đầm nữ",
+        "children": [
+          {
+            "name": "Đầm dáng xòe"
+          },
+          {
+            "name": "Đầm dáng ôm"
+          },
+          {
+            "name": "Đầm suông"
+          },
+          {
+            "name": "Đầm công sở"
+          },
+          {
+            "name": "Đầm dự tiệc"
+          },
+          {
+            "name": "Đầm maxi"
+          }
+        ]
+      },
+      {
+        "name": "Chân váy",
+        "children": [
+          {
+            "name": "Chân váy dài"
+          },
+          {
+            "name": "Chân váy ngắn"
+          },
+          {
+            "name": "Chân váy xếp li"
+          },
+          {
+            "name": "Chân váy bút chì"
+          },
+          {
+            "name": "Chân váy chữ A"
+          },
+          {
+            "name": "Chân váy công sở"
+          }
+        ]
+      },
+      {
+        "name": "Quần nữ",
+        "children": [
+          {
+            "name": "Quần jeans nữ"
+          },
+          {
+            "name": "Quần shorts nữ"
+          },
+          {
+            "name": "Quần tây nữ"
+          },
+          {
+            "name": "Quần ống rộng nữ"
+          },
+          {
+            "name": "Quần baggy nữ"
+          },
+          {
+            "name": "Quần legging - tregging nữ"
+          },
+          {
+            "name": "Quần yếm"
+          }
+        ]
+      },
+      {
+        "name": "Áo khoác nữ",
+        "children": [
+          {
+            "name": "Áo cardigan nữ"
+          },
+          {
+            "name": "Áo vest, blazer nữ"
+          },
+          {
+            "name": "Áo thun - Áo khoác nỉ nữ"
+          },
+          {
+            "name": "Áo khoác jeans nữ"
+          },
+          {
+            "name": "Áo khoác dạ nữ"
+          },
+          {
+            "name": "Áo khoác chống nắng nữ"
+          },
+          {
+            "name": "Áo khoác phao nữ"
+          },
+          {
+            "name": "Áo khoác bombẻ jackets"
+          },
+          {
+            "name": "Áo khoác da nữ"
+          }
+        ]
+      },
+      {
+        "name": "Áo liền quần - Bộ trang phục",
+        "children": [
+          {
+            "name": "Áo liền quần"
+          },
+          {
+            "name": "Bộ trang phục"
+          },
+          {
+            "name": "Áo dài"
+          }
+        ]
+      },
+      {
+        "name": "Thời trang bầu và sau sinh",
+        "children": [
+          {
+            "name": "Đầm bầu"
+          },
+          {
+            "name": "Áo bầu"
+          },
+          {
+            "name": "Quần bầu"
+          },
+          {
+            "name": "Bộ đồ bầu"
+          },
+          {
+            "name": "Đồ lót bầu"
+          }
+        ]
+      },
+      {
+        "name": "Thời trang trung niên"
+      },
+      {
+        "name": "Đồ ngủ - Đồ mặc nhà nữ",
+        "children": [
+          {
+            "name": "Đồ ngủ nữ"
+          },
+          {
+            "name": "Đồ mặc nhà"
+          }
+        ]
+      },
+      {
+        "name": "Trang phục bơi nữ",
+        "children": [
+          {
+            "name": "Bikini"
+          },
+          {
+            "name": "Đồ bơi một mảnh"
+          },
+          {
+            "name": "Đồ bơi hai mảnh"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thời trang nam",
+    "children": [
+      {
+        "name": "Áo thun nam",
+        "children": [
+          {
+            "name": "Áo thun nam ngắn tay có cổ"
+          },
+          {
+            "name": "Áo thun nam ngắn tay không cổ"
+          },
+          {
+            "name": "Áo thun nam ba lỗ"
+          },
+          {
+            "name": "Áo thun nam dài tay"
+          }
+        ]
+      },
+      {
+        "name": "Áo sơ mi nam",
+        "children": [
+          {
+            "name": "Áo sơ mi nam dài tay"
+          },
+          {
+            "name": "Áo sơ mi nam ngắn tay "
+          },
+          {
+            "name": "Áo sơ mi nam cổ tàu"
+          }
+        ]
+      },
+      {
+        "name": "Áo vest - Áo khoác nam",
+        "children": [
+          {
+            "name": "Áo khoác phao nam"
+          },
+          {
+            "name": "Áo khoác da nam "
+          },
+          {
+            "name": "Áo khoác gió"
+          },
+          {
+            "name": "Áo khoác "
+          },
+          {
+            "name": "Áo khoác jeans nam "
+          },
+          {
+            "name": "Áo cardigan nam "
+          },
+          {
+            "name": "Bộ vest nam "
+          }
+        ]
+      },
+      {
+        "name": "Áo hoodie nam",
+        "children": [
+          {
+            "name": "Áo hoodie nam vải da cả"
+          },
+          {
+            "name": "Áo hoodie nam vải nỉ"
+          },
+          {
+            "name": "Áo hoodie nam vải cotton"
+          }
+        ]
+      },
+      {
+        "name": "Áo nỉ - Áo len nam",
+        "children": [
+          {
+            "name": "Áo len nam"
+          },
+          {
+            "name": "Áo nỉ nam "
+          }
+        ]
+      },
+      {
+        "name": "Quần nam",
+        "children": [
+          {
+            "name": "Quần jeans nam"
+          },
+          {
+            "name": "Quần tây nam"
+          },
+          {
+            "name": "Quần kaki nam"
+          },
+          {
+            "name": "Quần jogger nam"
+          },
+          {
+            "name": "Quần thun nam"
+          }
+        ]
+      },
+      {
+        "name": "Đồ ngủ, đồ mặc nhà nam",
+        "children": [
+          {
+            "name": "Đồ mặc nhà nam - Bộ dài"
+          },
+          {
+            "name": "Đồ mặc nhà nam - Bộ ngắn"
+          }
+        ]
+      },
+      {
+        "name": "Đồ đôi-Đồ gia đình nam",
+        "children": [
+          {
+            "name": "Áo đôi"
+          },
+          {
+            "name": "Quần đôi"
+          },
+          {
+            "name": "Áo gia đình"
+          }
+        ]
+      },
+      {
+        "name": "Đồ lót nam",
+        "children": [
+          {
+            "name": "Đồ lót nam"
+          },
+          {
+            "name": "Bộ đồ lót nam"
+          }
+        ]
+      },
+      {
+        "name": "Quần áo nam trung niên",
+        "children": [
+          {
+            "name": "Áo nam trung niên"
+          },
+          {
+            "name": "Quần nam trung niên"
+          }
+        ]
+      },
+      {
+        "name": "Đồ bơi-Đồ đi biển nam",
+        "children": [
+          {
+            "name": "Áo bơi-đi biển nam"
+          },
+          {
+            "name": "Quần bơi-đi biển nam"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Giày - Dép nữ",
+    "children": [
+      {
+        "name": "Giày cao gót",
+        "children": [
+          {
+            "name": "Giày cao gót nhọn"
+          },
+          {
+            "name": "Giày cao gót quai sau"
+          },
+          {
+            "name": "Giày bít mũi quai ngang"
+          },
+          {
+            "name": "Giày cao gót hở mũi"
+          },
+          {
+            "name": "Giày cao gót sục"
+          }
+        ]
+      },
+      {
+        "name": "Giày thể thao nữ",
+        "children": [
+          {
+            "name": "Giày thể thao cổ thấp"
+          },
+          {
+            "name": "Giày thể thao cổ cao"
+          }
+        ]
+      },
+      {
+        "name": "Giày sandals nữ",
+        "children": [
+          {
+            "name": "Giày sandals đế bằng"
+          },
+          {
+            "name": "Giày sandals chiến binh"
+          },
+          {
+            "name": "Giày sandals buộc dây"
+          },
+          {
+            "name": "Giày sandals xỏ ngón"
+          }
+        ]
+      },
+      {
+        "name": "Giày búp bê",
+        "children": [
+          {
+            "name": "Giày búp bê mũi nhọn"
+          },
+          {
+            "name": "Giày búp bê mũi tròn"
+          },
+          {
+            "name": "Giày búp bê mũi vuông"
+          }
+        ]
+      },
+      {
+        "name": "Giày đế xuồng nữ"
+      },
+      {
+        "name": "Giày boots nữ",
+        "children": [
+          {
+            "name": "Giày boots nữ cổ ngắn"
+          },
+          {
+            "name": "Giày boots nữ cổ cao"
+          },
+          {
+            "name": "Giày boots nữ gót nhọn"
+          }
+        ]
+      },
+      {
+        "name": "Dép - Guốc nữ",
+        "children": [
+          {
+            "name": "Dép xỏ ngón"
+          },
+          {
+            "name": "Dép quai ngang"
+          },
+          {
+            "name": "Dép đi trong nhà"
+          }
+        ]
+      },
+      {
+        "name": "Giày lười nữ",
+        "children": [
+          {
+            "name": "Giày lười cao gót"
+          },
+          {
+            "name": "Giày lười hở gót"
+          },
+          {
+            "name": "Giày lười mũi vuông"
+          },
+          {
+            "name": "Giày lười mũi nhọn"
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiện giày",
+        "children": [
+          {
+            "name": "Miếng lót giày"
+          },
+          {
+            "name": "Vệ sinh giày"
+          },
+          {
+            "name": "Phụ kiện cho giày"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Túi thời trang nữ",
+    "children": [
+      {
+        "name": "Túi tote nữ",
+        "children": [
+          {
+            "name": "Túi tote có khoá"
+          },
+          {
+            "name": "Túi tote không khoá"
+          }
+        ]
+      },
+      {
+        "name": "Túi đeo chéo, túi đeo vai nữ",
+        "children": [
+          {
+            "name": "Túi đeo chéo công sở"
+          },
+          {
+            "name": "Túi đeo chéo dạo phố"
+          }
+        ]
+      },
+      {
+        "name": "Túi xách tay nữ",
+        "children": [
+          {
+            "name": "Túi xách bản to"
+          },
+          {
+            "name": "Túi xách vừa và nhỏ"
+          }
+        ]
+      },
+      {
+        "name": "Ví nữ",
+        "children": [
+          {
+            "name": "Ví ngắn"
+          },
+          {
+            "name": "Ví dài"
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiện túi",
+        "children": [
+          {
+            "name": "Dây, quai đeo túi"
+          },
+          {
+            "name": "Phụ kiện cài túi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Giày - Dép nam",
+    "children": [
+      {
+        "name": "Giày thể thao nam",
+        "children": [
+          {
+            "name": "Giày thể thao nam cổ thấp"
+          },
+          {
+            "name": "Giày thể thao nam cổ cao"
+          }
+        ]
+      },
+      {
+        "name": "Giày lười nam",
+        "children": [
+          {
+            "name": "Giày lười vải nam"
+          },
+          {
+            "name": "Giày lười da nam"
+          },
+          {
+            "name": "Giày lười nhựa nam"
+          }
+        ]
+      },
+      {
+        "name": "Giày tây nam",
+        "children": [
+          {
+            "name": "Giày tây nam có day"
+          },
+          {
+            "name": "Giày tây nam không day"
+          }
+        ]
+      },
+      {
+        "name": "Giày sandals nam",
+        "children": [
+          {
+            "name": "Giày sandals nam quai ngang"
+          },
+          {
+            "name": "Giày sandals nam quai chéo"
+          }
+        ]
+      },
+      {
+        "name": "Dép nam",
+        "children": [
+          {
+            "name": "Dép nam xỏ ngón"
+          },
+          {
+            "name": "Dép nam quai ngang"
+          },
+          {
+            "name": "Dép nam đi trong nhà"
+          }
+        ]
+      },
+      {
+        "name": "Giày boots nam",
+        "children": [
+          {
+            "name": "Giày boots nam cổ cao"
+          },
+          {
+            "name": "Giày boots nam cổ thấp"
+          }
+        ]
+      },
+      {
+        "name": "phù kiện giày nam",
+        "children": [
+          {
+            "name": "Vệ sinh giày"
+          },
+          {
+            "name": "Miếng lót giày nam"
+          },
+          {
+            "name": "Phù kiện cho giày nam"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Túi thời trang nam",
+    "children": [
+      {
+        "name": "Túi xách công sở"
+      },
+      {
+        "name": "Túi đeo chéo nam"
+      },
+      {
+        "name": "Túi bao tử, túi đeo bụng"
+      },
+      {
+        "name": "Ví nam"
+      }
+    ]
+  },
+  {
+    "name": "Balo và vali",
+    "children": [
+      {
+        "name": "Balo",
+        "children": [
+          {
+            "name": "Balo nam"
+          },
+          {
+            "name": "Balo nữ"
+          },
+          {
+            "name": "Balo laptop"
+          },
+          {
+            "name": "Balo dây rút"
+          }
+        ]
+      },
+      {
+        "name": "Túi du lịch và phụ kện",
+        "children": [
+          {
+            "name": "Balo du lịch phượt"
+          },
+          {
+            "name": "Túi trống"
+          }
+        ]
+      },
+      {
+        "name": "Vali, phụ kiện vali",
+        "children": [
+          {
+            "name": "Vali nhựa"
+          },
+          {
+            "name": "Vali vải"
+          },
+          {
+            "name": "Vali trẻ em"
+          },
+          {
+            "name": "Phụ kiện vali"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Phụ kiện thời trang",
+    "children": [
+      {
+        "name": "Mắt kính",
+        "children": [
+          {
+            "name": "Mắt kính"
+          },
+          {
+            "name": "Gọng kính"
+          },
+          {
+            "name": "Kính áp tròng"
+          },
+          {
+            "name": "Mắt kính trẻ em"
+          },
+          {
+            "name": "Phụ kiện kính "
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiện thời trang nam ",
+        "children": [
+          {
+            "name": "Nón nam"
+          },
+          {
+            "name": "Khăn - Găng tay nam"
+          },
+          {
+            "name": "Tấp, vớ nam"
+          },
+          {
+            "name": "Thắt lưng, dây nịt nam"
+          },
+          {
+            "name": "Hình xăm"
+          },
+          {
+            "name": "Găng tay nam "
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Đồng hồ và Trang sức nam",
+    "children": [
+      {
+        "name": "Đồng hồ nam",
+        "children": [
+          {
+            "name": "Đồng hồ business nam"
+          },
+          {
+            "name": "Đồng hồ thời trang, casual nam"
+          },
+          {
+            "name": "Đồng hồ thể thao nam"
+          },
+          {
+            "name": "Đồng hồ lộ máy"
+          }
+        ]
+      },
+      {
+        "name": "Đồng hồ nữ",
+        "children": [
+          {
+            "name": "Đồng hồ dây da"
+          },
+          {
+            "name": "Đồng hồ dây kim loại"
+          },
+          {
+            "name": "Đồng hồ thể thao nữ"
+          }
+        ]
+      },
+      {
+        "name": "Đồng hồ trẻ em",
+        "children": [
+          {
+            "name": "Đồng hồ bé trai"
+          },
+          {
+            "name": "Đồng hồ dây bé gái"
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiện đồng hồ",
+        "children": [
+          {
+            "name": " Dây đông hồ"
+          },
+          {
+            "name": "Hộp đựng đồng hồ"
+          },
+          {
+            "name": "Dụng cụ sửa đồng hồ"
+          },
+          {
+            "name": "Pin đồng hồ "
+          }
+        ]
+      },
+      {
+        "name": "Trang sức",
+        "children": [
+          {
+            "name": " Dây chuyền"
+          },
+          {
+            "name": "Vòng tay"
+          },
+          {
+            "name": "Bông tai"
+          },
+          {
+            "name": "Nhẫn "
+          },
+          {
+            "name": "Bộ trang sức"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Laptop - Máy vi tính - Linh kiện",
+    "children": [
+      {
+        "name": "Laptop",
+        "children": [
+          {
+            "name": "Laptop truyền thống"
+          },
+          {
+            "name": "Macbook"
+          },
+          {
+            "name": "Laptop Gaming"
+          },
+          {
+            "name": "Laptop 2 trong 1"
+          },
+          {
+            "name": "Chromebooks"
+          }
+        ]
+      },
+      {
+        "name": "Thiết Bị Văn Phong - Thiết Bị Ngoại Vi  ",
+        "children": [
+          {
+            "name": "Màn Hình Máy Tính"
+          },
+          {
+            "name": "Máy In - Photocopy "
+          },
+          {
+            "name": "Phần Mềm Máy Tính"
+          },
+          {
+            "name": "Mực In và Toner"
+          },
+          {
+            "name": "Máy Scan Tài Liệu"
+          },
+          {
+            "name": "Giáy In"
+          },
+          {
+            "name": "Máy Chiếu và Phụ Kiện Máy Chiếu"
+          },
+          {
+            "name": "Máy Scan Mã Vạch"
+          },
+          {
+            "name": "Máy Hủy tài Liệu  "
+          },
+          {
+            "name": "Máy Chấm Công "
+          },
+          {
+            "name": "Máy Fax"
+          },
+          {
+            "name": "Máy Đếm tiền"
+          },
+          {
+            "name": "Thít Bị Truyền Thông Hội Nghị "
+          }
+        ]
+      },
+      {
+        "name": "Thiếu Bị Lưu Trữ",
+        "children": [
+          {
+            "name": "Ổ Cứng Gắn Trong "
+          },
+          {
+            "name": "Ổ Cứng Di Động"
+          },
+          {
+            "name": "Case Ổ Cứng Hộp Đựng HĐ Box Dock Ổ Cứng"
+          },
+          {
+            "name": "Thiết Bị Lưu Trữ Qua Mạng NAS  "
+          },
+          {
+            "name": "USB"
+          },
+          {
+            "name": "Đĩa Trắng - Băng Cuộn"
+          }
+        ]
+      },
+      {
+        "name": "Thiếu Bị Mạng",
+        "children": [
+          {
+            "name": " Thiếu Bị Phát Sóng Wifi "
+          },
+          {
+            "name": "Bộ Khích Sóng Wifi "
+          },
+          {
+            "name": "Bộ Phát Wifi Di Động 3G/4G - Mifi"
+          },
+          {
+            "name": "Bộ Chia Mạng - Switch "
+          },
+          {
+            "name": "Phụ Kiện Thiết Bị Mạng"
+          },
+          {
+            "name": "Bộ Chuyển Đổi - Transceivers"
+          },
+          {
+            "name": "Mở Rộng Mạng Qua Đường Điện - Powerline Ethernet "
+          },
+          {
+            "name": "Card Mạng"
+          },
+          {
+            "name": "Ăng-Tưn Mạng"
+          },
+          {
+            "name": "Modem ADSL"
+          }
+        ]
+      },
+      {
+        "name": "PC - Máy Tính Bộ",
+        "children": [
+          {
+            "name": "Má Tính All in one"
+          },
+          {
+            "name": "Mini PC"
+          },
+          {
+            "name": "Máy Tính Để Bàn Lắp Ráp"
+          },
+          {
+            "name": "Towers - Máy Chủ - Sever"
+          },
+          {
+            "name": "Máy Tính Bộ Thượng Hiệu"
+          }
+        ]
+      },
+      {
+        "name": "Lịnh Kiện Máy Tính - Phụ Kiện Máy Tính",
+        "children": [
+          {
+            "name": "Nguyồn Máy Tính"
+          },
+          {
+            "name": "Bộ lưu Điện_UPS"
+          },
+          {
+            "name": "Mainboard - Board Mạch chủ"
+          },
+          {
+            "name": "Bộ Vi Xử Lý CPU"
+          },
+          {
+            "name": "Vỏ Case - Thùng Máy"
+          },
+          {
+            "name": "Hệ Thống Tản Nhiệt"
+          },
+          {
+            "name": "Card Màn Hình - VGA"
+          },
+          {
+            "name": "Sound Card - Card Âm Thanh"
+          },
+          {
+            "name": "RAM Máy Tính"
+          },
+          {
+            "name": "Sound Card - Card Âm Thanh"
+          },
+          {
+            "name": "Ổ Đĩa Quang"
+          },
+          {
+            "name": "I/O Port Cards"
+          },
+          {
+            "name": "Thiết Bị Streaming và Capture Cards"
+          },
+          {
+            "name": "KVM Switches - Switch HDMI"
+          },
+          {
+            "name": "Linh Kiện Máy Tính Khác"
+          },
+          {
+            "name": "Linh Kiện Thay Thế Cho Laptop"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nhà Cửa - Đời Sống",
+    "children": [
+      {
+        "name": "Công cụ nhà bếp",
+        "children": [
+          {
+            "name": "Ầm nước các loại"
+          },
+          {
+            "name": "Dụng cụ đựng thực phẩm"
+          },
+          {
+            "name": "Dao, kéo và phụ kiện"
+          },
+          {
+            "name": "Dụng cụ làm bánh"
+          },
+          {
+            "name": "Kệ nhà bếp"
+          },
+          {
+            "name": "Bếp nướng, vỉ nướng"
+          },
+          {
+            "name": "Phụ kiện nhà bếp"
+          },
+          {
+            "name": "Nồi và chảo"
+          }
+        ]
+      },
+      {
+        "name": "Đồ dùng phòng ăn",
+        "children": [
+          {
+            "name": "Bình nước, bình giữ nhiệt & Phụ kiện"
+          },
+          {
+            "name": "Bình lọc, lõi lọc, thiết bị lọc nước"
+          },
+          {
+            "name": "Bình, ly uống trà và phụ kiện"
+          },
+          {
+            "name": "Bình, ly uống cà phê và phụ kiện "
+          },
+          {
+            "name": "Bình, cốc & phụ kiện ly"
+          },
+          {
+            "name": "Đũa, muỗng nĩa"
+          },
+          {
+            "name": "Dụng cụ pha cà phê"
+          },
+          {
+            "name": "Phụ kiện phòng ăn"
+          },
+          {
+            "name": "Tô, chén, dĩa"
+          }
+        ]
+      },
+      {
+        "name": "Đồ dùng phòng ngủ",
+        "children": [
+          {
+            "name": "Bộ ga, ra, drap"
+          },
+          {
+            "name": "Chăn, mền và phụ kiện"
+          },
+          {
+            "name": "Gối, ruột gối, vỏ gối"
+          },
+          {
+            "name": "Nệm và phụ kiện"
+          },
+          {
+            "name": "Phụ kiện, phòng ngủ"
+          }
+        ]
+      },
+      {
+        "name": "Nội thất",
+        "children": [
+          {
+            "name": "Nội thất phòng khách"
+          },
+          {
+            "name": "Nội thất phòng ngủ"
+          },
+          {
+            "name": "Nội thất phòng ăn"
+          },
+          {
+            "name": "Nội thất phòng học, làm việc"
+          },
+          {
+            "name": "Nội thất trẻ em"
+          },
+          {
+            "name": "Nội thất khác"
+          }
+        ]
+      },
+      {
+        "name": "Nội thất",
+        "children": [
+          {
+            "name": "Nội thất phòng khách"
+          },
+          {
+            "name": "Nội thất phòng ngủ"
+          },
+          {
+            "name": "Nội thất phòng ăn"
+          },
+          {
+            "name": "Nội thất phòng học, làm việc"
+          },
+          {
+            "name": "Nội thất trẻ em"
+          },
+          {
+            "name": "Nội thất khác"
+          }
+        ]
+      },
+      {
+        "name": "Trang trí nhà cửa",
+        "children": [
+          {
+            "name": "Decal & giấy dán tường"
+          },
+          {
+            "name": "Decal & giấy dán kính"
+          },
+          {
+            "name": "Đồng hồ"
+          },
+          {
+            "name": "Tranh trang trí "
+          },
+          {
+            "name": "Trang trí nhà cửa"
+          },
+          {
+            "name": "Vật phẩm phong thủy"
+          }
+        ]
+      },
+      {
+        "name": "Đèn & thiết bị chiếu sáng",
+        "children": [
+          {
+            "name": "Đèn bàn"
+          },
+          {
+            "name": "Đèn pin"
+          },
+          {
+            "name": "Đèn ngủ"
+          },
+          {
+            "name": "Đèn ngoài trời"
+          },
+          {
+            "name": "Đèn trần"
+          },
+          {
+            "name": "Đèn cảm ứng"
+          },
+          {
+            "name": "Đèn khác"
+          },
+          {
+            "name": "Đèn diệt côn trùng"
+          },
+          {
+            "name": "Đèn xông tinh dầu, tinh dầu và phụ kiện"
+          }
+        ]
+      },
+      {
+        "name": "Ngoài trời & sân vườn ",
+        "children": [
+          {
+            "name": "Áo mưa, ô dù và phụ kiện đi mưa"
+          },
+          {
+            "name": "Dụng cụ làm vườn"
+          },
+          {
+            "name": "Máy xịt rửa và phụ kiện"
+          },
+          {
+            "name": "Ngoại thất sân vườn"
+          },
+          {
+            "name": "Bể bơi và phụ kiện"
+          },
+          {
+            "name": "Dụng cụ ngoài trời khác"
+          }
+        ]
+      },
+      {
+        "name": "Đồ dùng và thiết bị nhà tắm",
+        "children": [
+          {
+            "name": "Khăn"
+          },
+          {
+            "name": "Phù kiện nhà tắm khác "
+          },
+          {
+            "name": "Kệ nhà tắm"
+          },
+          {
+            "name": "Thiết bị phòng tắm "
+          },
+          {
+            "name": "Phụ kiện giặt ủi"
+          },
+          {
+            "name": "Dụng cụ vệ sinh"
+          }
+        ]
+      },
+      {
+        "name": "Sửa chữa nhà cửa",
+        "children": [
+          {
+            "name": "Bảo hộ lao động "
+          },
+          {
+            "name": "Xe đẩy hàng"
+          },
+          {
+            "name": "Sơn, đầu mỡ, hóa chất "
+          },
+          {
+            "name": "Bộ dụng cụ đa năng "
+          },
+          {
+            "name": "Đá cắt, que hàn, cưa & lưởi cưa "
+          },
+          {
+            "name": "Thang nhôm"
+          },
+          {
+            "name": "Dụng cụ sửa chữa khác"
+          },
+          {
+            "name": "Thiết bị đo lường"
+          },
+          {
+            "name": "Thùng đồ nghề, túi công cụ"
+          }
+        ]
+      },
+      {
+        "name": "Nhạc cụ",
+        "children": [
+          {
+            "name": "Đàn piano "
+          },
+          {
+            "name": "Amply"
+          },
+          {
+            "name": "Đàn organ"
+          },
+          {
+            "name": "Đàn guitar, ukulele"
+          },
+          {
+            "name": "Phụ kiện đàn"
+          },
+          {
+            "name": "Nhạc cụ dân tộc "
+          },
+          {
+            "name": "Kèn, trống & phụ kiện"
+          },
+          {
+            "name": "Phụ kiện khác"
+          },
+          {
+            "name": "Các loại đàn khác"
+          }
+        ]
+      },
+      {
+        "name": "Đồ thờ cúng",
+        "children": [
+          {
+            "name": "Bộ thờ cúng"
+          },
+          {
+            "name": "Lư trầm, bát hương, bát nhang"
+          },
+          {
+            "name": "Bàn thờ"
+          },
+          {
+            "name": "Hương, nhang"
+          },
+          {
+            "name": "Phụ kiện thờ cúng"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bách hoá online",
+    "children": [
+      {
+        "name": "Đồ ăn vặt",
+        "children": [
+          {
+            "name": "Bánh"
+          },
+          {
+            "name": "Kẹo"
+          },
+          {
+            "name": "Chocolate"
+          },
+          {
+            "name": "Snack"
+          },
+          {
+            "name": "Bánh kẹo khác"
+          },
+          {
+            "name": "Khô các loại"
+          },
+          {
+            "name": "Các loại đồ ăn vặt khác"
+          }
+        ]
+      },
+      {
+        "name": "Thực phẩm đóng hộp và khô",
+        "children": [
+          {
+            "name": "Thực phẩm khô"
+          },
+          {
+            "name": "Đặc sản Việt Nam"
+          },
+          {
+            "name": "Đồ hộp"
+          },
+          {
+            "name": "Thực phẩm khác"
+          }
+        ]
+      },
+      {
+        "name": "Đồ uống không cồn",
+        "children": [
+          {
+            "name": "Đồ uống không gas"
+          },
+          {
+            "name": "Đồ uống có gas"
+          }
+        ]
+      },
+      {
+        "name": "Gia vị và chế biến",
+        "children": [
+          {
+            "name": "Gia vị dạng bột"
+          },
+          {
+            "name": "Gia vị dạng nước"
+          },
+          {
+            "name": "Dầu ăn"
+          },
+          {
+            "name": "Nấu ăn và làm bánh"
+          }
+        ]
+      },
+      {
+        "name": "Chăm sóc thú cưng",
+        "children": [
+          {
+            "name": "Thức ăn thú cưng"
+          },
+          {
+            "name": "Phụ kiện thú cưng"
+          }
+        ]
+      },
+      {
+        "name": "Bộ quà tặng",
+        "children": [
+          {
+            "name": "Bánh Trung thu"
+          },
+          {
+            "name": "Hộp Quà Tết"
+          },
+          {
+            "name": "Hộp Quà Tặng"
+          },
+          {
+            "name": "Hàng Mùa vụ khác"
+          }
+        ]
+      },
+      {
+        "name": "Đồ uống - Pha chế dạng bột",
+        "children": [
+          {
+            "name": "Trà"
+          },
+          {
+            "name": "Cà phê"
+          },
+          {
+            "name": "Ngũ cốc, bột"
+          },
+          {
+            "name": "Các loại đồ uống dạng bột khác"
+          }
+        ]
+      },
+      {
+        "name": "Sữa và các sản phẩm từ sữa",
+        "children": [
+          {
+            "name": "Sữa nước"
+          },
+          {
+            "name": "Sữa chức năng dạng bột"
+          }
+        ]
+      },
+      {
+        "name": "Đồ uống có cồn",
+        "children": [
+          {
+            "name": "Đồ uống có cồn khác"
+          },
+          {
+            "name": "Bia và Nước hoa quả lên men"
+          },
+          {
+            "name": "Rượu"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thiết bị số - Phụ kiện số",
+    "children": [
+      {
+        "name": "Thiết bị âm thanh và phụ kiện",
+        "children": [
+          {
+            "name": "Tai nghe có dây"
+          },
+          {
+            "name": "Tai nghe Bluetooth"
+          },
+          {
+            "name": "Loa nghe nhạc"
+          },
+          {
+            "name": "Micro"
+          },
+          {
+            "name": "DAC và Amplifier di động"
+          },
+          {
+            "name": "Máy thu và máy phát âm thanh"
+          }
+        ]
+      },
+      {
+        "name": "Thiết bị chơi game và phụ kiện",
+        "children": [
+          {
+            "name": "Đĩa game"
+          },
+          {
+            "name": "Ghế Gaming"
+          },
+          {
+            "name": "Máy chơi game - Console"
+          },
+          {
+            "name": "Tay bấm game - Thiết bị điều khiển"
+          },
+          {
+            "name": "Phụ kiện gaming"
+          },
+          {
+            "name": "Tay bấm game - Thiết bị điều khiển"
+          }
+        ]
+      },
+      {
+        "name": "Thiết bị Đeo thông minh và phụ kiện",
+        "children": [
+          {
+            "name": "Mắt kính thông minh"
+          },
+          {
+            "name": "Thiết bị thực tế ảo VR"
+          },
+          {
+            "name": "Đồng hồ thông minh"
+          },
+          {
+            "name": "Vòng đeo thông minh - Vòng theo dõi vận động"
+          },
+          {
+            "name": "Phụ kiện thiết bị đeo thông minh"
+          }
+        ]
+      },
+      {
+        "name": "Thiết bị thông minh và linh kiện điện tử",
+        "children": [
+          {
+            "name": "Thiết bị số - Thiết bị thông minh"
+          },
+          {
+            "name": "Mạch điện lập trình và linh kiện điện tử"
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiện điện thoại và máy tính bảng",
+        "children": [
+          {
+            "name": "Thẻ nhớ và bộ nhớ mở rộng"
+          },
+          {
+            "name": "Sim điện thoại"
+          },
+          {
+            "name": "Pin sạc dự phòng"
+          },
+          {
+            "name": "Dây sạc - Dây cáp"
+          },
+          {
+            "name": "Adapter - Củ sạc"
+          },
+          {
+            "name": "Linh kiện thay thế"
+          },
+          {
+            "name": "Dụng cụ sửa chữa và vệ sinh"
+          },
+          {
+            "name": "Giá đỡ - Chân đế - Móc dán"
+          },
+          {
+            "name": "Hộp đựng - Túi đựng phụ kiện"
+          },
+          {
+            "name": "Vòng đeo - Đai đeo"
+          },
+          {
+            "name": "Dây đeo và phụ kiện trang trí"
+          },
+          {
+            "name": "Miếng dán màn hình"
+          },
+          {
+            "name": "Bao da - Ốp lưng"
+          },
+          {
+            "name": "Bàn phím dời - Bút cảm ứng"
+          },
+          {
+            "name": "Phụ kiện chụp hình"
+          },
+          {
+            "name": "Phụ kiện chơi game"
+          },
+          {
+            "name": "Phụ kiện di động khác"
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiện máy tính và laptop",
+        "children": [
+          {
+            "name": "Dụng cụ vệ sinh và sửa chữa"
+          },
+          {
+            "name": "Phụ kiện laptop"
+          },
+          {
+            "name": "Webcam máy tính"
+          },
+          {
+            "name": "Bút trình chiếu"
+          },
+          {
+            "name": "Bàn di chuột - Miếng lót chuột"
+          },
+          {
+            "name": "Phụ kiện phím chuột văn phòng"
+          },
+          {
+            "name": "Phụ kiện phím chuột chơi game"
+          },
+          {
+            "name": "Tai nghe máy tính"
+          },
+          {
+            "name": "Công cụ đồ hoạ - Thiết bị cảm ứng"
+          },
+          {
+            "name": "Các loại cáp chuyển đổi"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Voucher - Dịch vụ",
+    "children": [
+      {
+        "name": "Nhà hàng-Ăn uống",
+        "children": [
+          {
+            "name": "Buffer"
+          },
+          {
+            "name": "Nhà hàng - Quán ăn"
+          },
+          {
+            "name": "Cafe - Kem- Bánh"
+          },
+          {
+            "name": "Bar - Beer club"
+          },
+          {
+            "name": "Nhà hàng"
+          },
+          {
+            "name": "Quán ăn"
+          }
+        ]
+      },
+      {
+        "name": "Du lịch - Khách sạn",
+        "children": [
+          {
+            "name": "Khách sạn - Resort"
+          },
+          {
+            "name": "Tour du lịch"
+          },
+          {
+            "name": "Sim 3G/4G-Bộ phát Wifi"
+          },
+          {
+            "name": "Vé tham quan-du lịch"
+          }
+        ]
+      },
+      {
+        "name": "Spa & Làm đẹp",
+        "children": [
+          {
+            "name": "Spa - Thẩm mỹ viện"
+          },
+          {
+            "name": "Salon làm đẹp"
+          },
+          {
+            "name": "Phòng tập"
+          },
+          {
+            "name": "Chăm sóc da mặt"
+          },
+          {
+            "name": "Massage Body - Foot"
+          },
+          {
+            "name": "Phẫu thuật thẩm mỹ"
+          }
+        ]
+      },
+      {
+        "name": "Sự kiện - Giải trí",
+        "children": [
+          {
+            "name": "Ca nhạc - Phim - Kịch"
+          },
+          {
+            "name": "Vui chơi-Giải trí"
+          },
+          {
+            "name": "Studio-Chup ảnh"
+          }
+        ]
+      },
+      {
+        "name": "Nha khoa - Sức khỏe",
+        "children": [
+          {
+            "name": "Nha khoa"
+          },
+          {
+            "name": "Khám sức khỏe tổng quát"
+          }
+        ]
+      },
+      {
+        "name": "Khóa học",
+        "children": [
+          {
+            "name": "Khóa học onhine"
+          },
+          {
+            "name": "Khóa học kinh doanh-marketing"
+          },
+          {
+            "name": "Khóa học vi tính văn phòng"
+          },
+          {
+            "name": "Khóa học kinh tế"
+          },
+          {
+            "name": "Khóa học thiết kế đồ họa và video"
+          },
+          {
+            "name": "Khóa học IT và lập trình"
+          },
+          {
+            "name": "Khóa học ngoại ngữ"
+          },
+          {
+            "name": "Khóa học nuôi dạy con và kỹ năng cho bé"
+          },
+          {
+            "name": "Khóa học nghệ thuật và chủ đề khác"
+          }
+        ]
+      },
+      {
+        "name": "Dịch vụ khác"
+      },
+      {
+        "name": "Phiếu quà tặng"
+      },
+      {
+        "name": "Vé xe bus"
+      }
+    ]
+  },
+  {
+    "name": "Ô Tô - Xe - Máy - Xe Đạp",
+    "children": [
+      {
+        "name": "Xe máy",
+        "children": [
+          {
+            "name": "Xe tay ga"
+          },
+          {
+            "name": "Xe số"
+          },
+          {
+            "name": "Xe côn tay "
+          },
+          {
+            "name": "Xe mô tô"
+          },
+          {
+            "name": "Xe 50cc"
+          },
+          {
+            "name": "Phiếu mua xe mô tô"
+          },
+          {
+            "name": "Phiếu mua xe máy"
+          }
+        ]
+      },
+      {
+        "name": "Xe điện",
+        "children": [
+          {
+            "name": "Xe máy điện"
+          },
+          {
+            "name": "Xe đạp điện"
+          },
+          {
+            "name": "Xe thăng bằng "
+          },
+          {
+            "name": "Phụ kiện xe điện "
+          }
+        ]
+      },
+      {
+        "name": "Xe đạp",
+        "children": [
+          {
+            "name": "Xe đạp thể thao"
+          },
+          {
+            "name": "Xe đạp thông dụng"
+          },
+          {
+            "name": "Xe đạp thời trang"
+          },
+          {
+            "name": "Xe đạp đua"
+          },
+          {
+            "name": "Xe đạp gấp "
+          },
+          {
+            "name": "Xe đạp Fixed Gear"
+          },
+          {
+            "name": "Xe đạp trẻ em"
+          }
+        ]
+      },
+      {
+        "name": "Xe Scooter"
+      },
+      {
+        "name": "Ô tô",
+        "children": [
+          {
+            "name": "SUV"
+          },
+          {
+            "name": "Xe tải"
+          },
+          {
+            "name": "Xe chuyên dụng "
+          },
+          {
+            "name": "Các dòng ôtô khác"
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiên - Chăm sóc xe",
+        "children": [
+          {
+            "name": "Mũ bảo hiểm"
+          },
+          {
+            "name": "Phụ kiện xe máy"
+          },
+          {
+            "name": "Phụ tùng xe máy"
+          },
+          {
+            "name": "Chăm sóc xe máy"
+          },
+          {
+            "name": "Đồ bảo hộ đi xe"
+          },
+          {
+            "name": "Phụ kiện ô tô"
+          },
+          {
+            "name": "Máy rửa xe"
+          },
+          {
+            "name": "Phụ tùng ô tô"
+          },
+          {
+            "name": "Chăm sóc ô tô"
+          }
+        ]
+      },
+      {
+        "name": "Dịch vụ, lắp đặt",
+        "children": [
+          {
+            "name": "Lắp đặt mâm lốp"
+          },
+          {
+            "name": "Lắp đặt phụ tùng, phụ kiện"
+          },
+          {
+            "name": "Dịch vụ bảo trì, sửa chữa"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nhà sách",
+    "children": [
+      {
+        "name": "English books",
+        "children": [
+          {
+            "name": "Art & Photography"
+          },
+          {
+            "name": "Biographíe & Memoirs"
+          },
+          {
+            "name": "Business & Economics"
+          },
+          {
+            "name": "How-to-Self help"
+          },
+          {
+            "name": "Children's book"
+          },
+          {
+            "name": "Dictionary"
+          },
+          {
+            "name": "Education - Teaching"
+          },
+          {
+            "name": "Fiction - Literature"
+          },
+          {
+            "name": "Magazines"
+          },
+          {
+            "name": "Medical Books"
+          },
+          {
+            "name": "Parenting & Relationship"
+          },
+          {
+            "name": "Reference"
+          },
+          {
+            "name": "Science & Technology"
+          },
+          {
+            "name": "History, Politics & Social Sciences"
+          },
+          {
+            "name": "Travel & Holiday"
+          },
+          {
+            "name": "Cookbooks, Food & Wine"
+          }
+        ]
+      },
+      {
+        "name": "Sách Tiếng Việt",
+        "children": [
+          {
+            "name": "Sách văn học"
+          },
+          {
+            "name": "Sách kinh tế"
+          },
+          {
+            "name": "Sách thiếu nhi"
+          },
+          {
+            "name": "Sách kĩ năng sống"
+          },
+          {
+            "name": "Sách Bà mẹ - Em bé"
+          },
+          {
+            "name": "Sách Giáo khoa - Giáo trình"
+          },
+          {
+            "name": "Sách học Ngoại ngữ"
+          },
+          {
+            "name": "Sách tham khảo"
+          },
+          {
+            "name": "Từ điển"
+          },
+          {
+            "name": "Sách kiến thức tổng hợp"
+          },
+          {
+            "name": "Sách Khoa học - Kỹ thuật"
+          },
+          {
+            "name": "Sách Lịch sử"
+          },
+          {
+            "name": "Điện ảnh - Nhạc - Hoạ"
+          },
+          {
+            "name": "Truyện tranh, Manga, Comic"
+          },
+          {
+            "name": "Sách Tôn giáo - Tâm linh"
+          },
+          {
+            "name": "Sách Văn hoá - Địa lý - Du lịch"
+          },
+          {
+            "name": "Sách Chính trị - Pháp lý"
+          },
+          {
+            "name": "Sách Nông - Lâm - Ngư nghiệp"
+          },
+          {
+            "name": "Sách Công nghệ Thông tin"
+          },
+          {
+            "name": "Sách Y học"
+          },
+          {
+            "name": "Tạp chí - Catalogue"
+          },
+          {
+            "name": "Sách Tâm lý - Giới tính"
+          },
+          {
+            "name": "Sách Thưòng thức - Gia đình"
+          },
+          {
+            "name": "Thể dục - Thể thao"
+          }
+        ]
+      },
+      {
+        "name": "Văn phòng phẩm",
+        "children": [
+          {
+            "name": "Dụng cụ văn phòng"
+          },
+          {
+            "name": "Bút - Viết các loại"
+          },
+          {
+            "name": "Bút chì màu - Bút lông màu - Sáp màu"
+          },
+          {
+            "name": "Dụng cụ học sinh"
+          },
+          {
+            "name": "Flashcards"
+          },
+          {
+            "name": "Sổ tay các loại"
+          },
+          {
+            "name": "Tập vở các loại"
+          },
+          {
+            "name": "Văn hoá phẩm"
+          },
+          {
+            "name": "Thiết bị giáo dục trường học"
+          },
+          {
+            "name": "Balo Học sinh - Cặp học sinh"
+          },
+          {
+            "name": "Máy tính điện tử"
+          },
+          {
+            "name": "Lịch"
+          },
+          {
+            "name": "Bút Kỹ thuật"
+          },
+          {
+            "name": "Sản phẩm về giấy"
+          },
+          {
+            "name": "Thiết bị văn phòng"
+          }
+        ]
+      },
+      {
+        "name": "Quà lưu niệm",
+        "children": [
+          {
+            "name": "Thú nhồi bông"
+          },
+          {
+            "name": "Bookmark"
+          },
+          {
+            "name": "Thiệp - Bưu ảnh"
+          },
+          {
+            "name": "Quà tặng trang sức"
+          },
+          {
+            "name": "Album - Khung hình"
+          },
+          {
+            "name": "Mô hình trang trí"
+          },
+          {
+            "name": "Sticker - Decal trang trí"
+          },
+          {
+            "name": "Ly - Cốc"
+          },
+          {
+            "name": "Kẹp ảnh gỗ"
+          },
+          {
+            "name": "Hộp quà - Túi quà"
+          },
+          {
+            "name": "Tượng"
+          },
+          {
+            "name": "Móc khoá - Phụ kiện trang trí"
+          },
+          {
+            "name": "Đồng hồ cát"
+          },
+          {
+            "name": "Quả cầu tuyết"
+          },
+          {
+            "name": "Hộp nhạc"
+          },
+          {
+            "name": "Phụ kiện - Vật liệu trang trí"
+          },
+          {
+            "name": "Quà tặng trang trí khác"
+          },
+          {
+            "name": "Gương mini"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Điện tử - Điện Lạnh",
+    "children": [
+      {
+        "name": "Tivi",
+        "children": [
+          {
+            "name": "Tivi cao cấp"
+          },
+          {
+            "name": "Smart Tivi - Android"
+          },
+          {
+            "name": "Internet Tivi"
+          },
+          {
+            "name": "Tivi 4K"
+          },
+          {
+            "name": "Tivi thường(LED)"
+          },
+          {
+            "name": "Tivi QLED"
+          },
+          {
+            "name": "Tivi OLED"
+          }
+        ]
+      },
+      {
+        "name": "Âm thanh & Phụ kiên Tivi",
+        "children": [
+          {
+            "name": "Android TV Bõ, Smart box"
+          },
+          {
+            "name": "Thiết bị phát Stearning"
+          },
+          {
+            "name": "Loa"
+          },
+          {
+            "name": "Dàn âm thanh"
+          },
+          {
+            "name": "Receivers, Amplìier, Mixer"
+          },
+          {
+            "name": "Bộ giãi mã âm thanh DAC"
+          },
+          {
+            "name": "Micro Karaoke - sân khấu"
+          },
+          {
+            "name": "Đầu CD, DVD, karaoke, Blu-ray"
+          },
+          {
+            "name": "Máy radio cassette"
+          },
+          {
+            "name": "Phụ kiện Tivi"
+          },
+          {
+            "name": "Phụ kiện âm thanh"
+          }
+        ]
+      },
+      {
+        "name": "Máy giặt"
+      },
+      {
+        "name": "Máy Sấy quần áo"
+      },
+      {
+        "name": "Máy rửa chén"
+      },
+      {
+        "name": "Máy lạnh - Máy điều hòa"
+      },
+      {
+        "name": "Máy nước nóng"
+      },
+      {
+        "name": "Tủ lạnh"
+      },
+      {
+        "name": "Tủ đông - Tủ mát"
+      },
+      {
+        "name": "Tủ ướp rượu"
+      },
+      {
+        "name": "Phụ kiện điện lạnh",
+        "children": [
+          {
+            "name": "Phụ kiện, linh kiện tủ lạnh"
+          },
+          {
+            "name": "Phụ kiện, linh kiện máy lạnh"
+          },
+          {
+            "name": "Phụ kiện, linh kiện máy nước lọc"
+          },
+          {
+            "name": "Phụ kiện, linh kiện máy giặt"
+          },
+          {
+            "name": "Phụ kiện, linh kiện điện lạnh khác"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Thể thao - Dã ngoại",
+    "children": [
+      {
+        "name": "Các môn thể thao chơi vợt",
+        "children": [
+          {
+            "name": "Bóng bàn"
+          },
+          {
+            "name": "Cầu lông"
+          },
+          {
+            "name": "Tennis"
+          }
+        ]
+      },
+      {
+        "name": "Các môn thể thao đồng đội",
+        "children": [
+          {
+            "name": "Bóng chày"
+          },
+          {
+            "name": "Bóng rổ"
+          },
+          {
+            "name": "Bóng đá"
+          },
+          {
+            "name": "Cầu đá - Cầu Mây"
+          },
+          {
+            "name": "Bóng chuyền"
+          }
+        ]
+      },
+      {
+        "name": "Các môn thể thao đối kháng",
+        "children": [
+          {
+            "name": "Boxing"
+          },
+          {
+            "name": "Kick Boxing"
+          },
+          {
+            "name": "Muay Thái"
+          },
+          {
+            "name": "MMA"
+          },
+          {
+            "name": "Karatedo"
+          },
+          {
+            "name": "Aikido"
+          },
+          {
+            "name": "Đấu vật"
+          },
+          {
+            "name": "Taekwondo"
+          },
+          {
+            "name": "Wushu"
+          },
+          {
+            "name": "Judo"
+          },
+          {
+            "name": "Vovinam"
+          },
+          {
+            "name": "Võ cổ truyền"
+          },
+          {
+            "name": "KungFu"
+          }
+        ]
+      },
+      {
+        "name": "Các môn thể thao khác",
+        "children": [
+          {
+            "name": "Thể dục dụng cụ"
+          },
+          {
+            "name": "Bowling"
+          },
+          {
+            "name": "Bida"
+          },
+          {
+            "name": "Phóng phi tiêu"
+          },
+          {
+            "name": "Bộ môn ném đĩa"
+          },
+          {
+            "name": "Golf"
+          },
+          {
+            "name": "Trượt Patin"
+          },
+          {
+            "name": "Yoga"
+          },
+          {
+            "name": "Trượt ván"
+          }
+        ]
+      },
+      {
+        "name": "Dụng cụ - Thiết bị tập thể thao",
+        "children": [
+          {
+            "name": "Máy chạy bộ"
+          },
+          {
+            "name": "Xe đạp tập"
+          },
+          {
+            "name": "Máy rung giảm cân"
+          },
+          {
+            "name": "Giàn tạ đa năng"
+          },
+          {
+            "name": "Xà đơn"
+          },
+          {
+            "name": "Xà kép"
+          },
+          {
+            "name": "Dụng cụ - Thiết bị tập bụng, eo"
+          },
+          {
+            "name": "Dây nhảy"
+          },
+          {
+            "name": "Tạ tập"
+          },
+          {
+            "name": "Dây đàn hồi tập gym"
+          },
+          {
+            "name": "Dụng cụ tập cơ tay"
+          },
+          {
+            "name": "Dụng cụ hít đất"
+          },
+          {
+            "name": "Dụng cụ tập thể thao khác"
+          }
+        ]
+      },
+      {
+        "name": "Giày thể thao nam",
+        "children": [
+          {
+            "name": "Giày chạy bộ nam"
+          },
+          {
+            "name": "Giày bóng chuyển nam"
+          },
+          {
+            "name": "Giày đá bóng nam"
+          },
+          {
+            "name": "Giày cầu lông nam"
+          },
+          {
+            "name": "Giày tennis nam"
+          },
+          {
+            "name": "Giày bóng rổ nam"
+          },
+          {
+            "name": "Giày bóng bàn nam"
+          },
+          {
+            "name": "Giày leo núi nam"
+          },
+          {
+            "name": "Giày đánh golf nam"
+          },
+          {
+            "name": "Giày thể thao nam khác"
+          }
+        ]
+      },
+      {
+        "name": "Trang phục thể thao nam",
+        "children": [
+          {
+            "name": "Áo thể thao nam"
+          },
+          {
+            "name": "Quần thể thao nam"
+          },
+          {
+            "name": "Quần áo đa banh nam"
+          },
+          {
+            "name": "Quần áo cầu lông nam"
+          },
+          {
+            "name": "Quần áo golf nam"
+          },
+          {
+            "name": "Quần áo tennis nam"
+          },
+          {
+            "name": "Quần áo bóng bàn nam"
+          },
+          {
+            "name": "Quần áo bóng chuyền nam"
+          },
+          {
+            "name": "Quần áo bóng rổ nam"
+          }
+        ]
+      },
+      {
+        "name": "Giày thể thao nữ",
+        "children": [
+          {
+            "name": "Giày chạy bộ nữ"
+          },
+          {
+            "name": "Giày đá banh nữ"
+          },
+          {
+            "name": "Giày cầu lông nữ"
+          },
+          {
+            "name": "Giày tennis nữ"
+          },
+          {
+            "name": "Giày leo núi nữ"
+          },
+          {
+            "name": "Giày thể thao nữ khác"
+          }
+        ]
+      },
+      {
+        "name": "Trang phục thể thao nữ",
+        "children": [
+          {
+            "name": "Áo thể thao nữ"
+          },
+          {
+            "name": "Quần thể thao nữ"
+          },
+          {
+            "name": "Quần áo đá banh nữ"
+          },
+          {
+            "name": "Quần áo golf nữ"
+          },
+          {
+            "name": "Quần áo cầu lông nữ"
+          },
+          {
+            "name": "Quần áo tennis nữ"
+          },
+          {
+            "name": "Quần áo bóng chuyền nữ"
+          },
+          {
+            "name": "Quần áo bóng rổ nữ"
+          }
+        ]
+      },
+      {
+        "name": "Dụng cụ leo núi",
+        "children": [
+          {
+            "name": "Gậy leo núi"
+          },
+          {
+            "name": "Thiết bị hỗ trợ leo dây"
+          },
+          {
+            "name": "Balo leo núi"
+          },
+          {
+            "name": "Phụ kiện leo núi khác"
+          }
+        ]
+      },
+      {
+        "name": "Đồ dùng dã ngoại",
+        "children": [
+          {
+            "name": "Dao xếp đa năng"
+          },
+          {
+            "name": "Kìm đa năng"
+          },
+          {
+            "name": "Bật lửa Zippo"
+          },
+          {
+            "name": "Lều trại, mái che"
+          },
+          {
+            "name": "Túi ngủ"
+          },
+          {
+            "name": "Thảm dã ngoại"
+          },
+          {
+            "name": "Đèn pin đội đầu"
+          },
+          {
+            "name": "La bàn"
+          },
+          {
+            "name": "Trang phục, phụ kiện chống thấm nước"
+          },
+          {
+            "name": "Bàn, ghế xếp dã ngoại"
+          },
+          {
+            "name": "Bếp, nồi dã ngoại"
+          },
+          {
+            "name": "Đồ dùng dã ngoại khác"
+          }
+        ]
+      },
+      {
+        "name": "Dụng cụ câu cá",
+        "children": [
+          {
+            "name": "Cần câu"
+          },
+          {
+            "name": "Lưỡi - Mồi - Phao"
+          },
+          {
+            "name": "Dây câu"
+          },
+          {
+            "name": "Máy câu"
+          },
+          {
+            "name": "Dụng cụ câu cá khác"
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiện thể thao",
+        "children": [
+          {
+            "name": "Bình nước thể thao"
+          },
+          {
+            "name": "Dụng cụ cổ động, cổ vũ"
+          },
+          {
+            "name": "Thiết bị điện tử thể thao"
+          },
+          {
+            "name": "Thiết bị sơ cứu"
+          },
+          {
+            "name": "Đai chạy bộ"
+          },
+          {
+            "name": "Túi thể thao"
+          },
+          {
+            "name": "Băng cổ tay, băng trán thể thao"
+          },
+          {
+            "name": "Nón, mũ thể thao"
+          },
+          {
+            "name": "Khăn đa năng, khăn thể thao"
+          },
+          {
+            "name": "Găng tay tập gym"
+          },
+          {
+            "name": "Phụ kiện thể thao khác"
+          },
+          {
+            "name": "Vớ thể thao"
+          }
+        ]
+      },
+      {
+        "name": "Thể thao dưới nước",
+        "children": [
+          {
+            "name": "Bơi lội"
+          },
+          {
+            "name": "Lướt ván"
+          },
+          {
+            "name": "Chèo thuyền"
+          },
+          {
+            "name": "Phao trượt"
+          },
+          {
+            "name": "Lặn biển"
+          }
+        ]
+      },
+      {
+        "name": "Thực phẩm bổ sung năng lượng",
+        "children": [
+          {
+            "name": "Thực phẩm tăng cân"
+          },
+          {
+            "name": "Thực phẩm giảm cân"
+          },
+          {
+            "name": "Thực phẩm tăng cơ"
+          },
+          {
+            "name": "Thực phẩm tăng sức bền"
+          },
+          {
+            "name": "Bổ sung năng lượng"
+          },
+          {
+            "name": "Bổ sung năng lượng khác"
+          },
+          {
+            "name": "Bổ sung vitamin và điện giải"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Máy ảnh - Máy quay phim",
+    "children": [
+      {
+        "name": "Máy ảnh",
+        "children": [
+          {
+            "name": "Máy Ảnh Compact - Máy Ảnh Du Lịch"
+          },
+          {
+            "name": "Máy Ảnh DSLR"
+          },
+          {
+            "name": "Máy Ảnh Mirrorless"
+          },
+          {
+            "name": "Máy Ảnh Lấy Liền"
+          },
+          {
+            "name": "Máy Chụp Ảnh Phim"
+          }
+        ]
+      },
+      {
+        "name": "Phụ kiện máy ảnh, máy quay",
+        "children": [
+          {
+            "name": "Pin - Sạc Máy Ảnh, Máy Quay"
+          },
+          {
+            "name": "Dụng Cụ Vệ Sinh Máy Ảnh"
+          },
+          {
+            "name": "Phụ Kiện Máy Ảnh, Máy Quay Khác"
+          },
+          {
+            "name": "Miếng Dán Bảo Vệ Màn Hình Máy Ảnh"
+          },
+          {
+            "name": "Kính Lọc - Filter"
+          },
+          {
+            "name": "Điều Khiển Từ Xa"
+          },
+          {
+            "name": "Phụ Kiện Cho Ống Kính"
+          },
+          {
+            "name": "Adapter - Ngàm Chuyển"
+          },
+          {
+            "name": "Lens Hood"
+          },
+          {
+            "name": "Gimbal"
+          },
+          {
+            "name": "Nắp Ống Kính"
+          },
+          {
+            "name": "Ngàm Gắn Máy Quay Trên Người"
+          },
+          {
+            "name": "Túi Hút Ẩm Cho Máy Ảnh, Máy Quay"
+          },
+          {
+            "name": "Hộp Chụp Ảnh Sản Phẩm"
+          },
+          {
+            "name": "Chân Máy Ảnh, Monopod, Tripod"
+          },
+          {
+            "name": "Thẻ Nhớ Máy Ảnh"
+          },
+          {
+            "name": "Thiết Bị Phòng Tối"
+          }
+        ]
+      },
+      {
+        "name": "Balo - túi đựng - Bao da",
+        "children": [
+          {
+            "name": "Hộp Đựng - Tủ Chống Ẩm"
+          },
+          {
+            "name": "Bao Đựng Chống Sốc, Chống Nước"
+          },
+          {
+            "name": "Dây Đeo Máy Ảnh, Máy Quay, Ống Nhòm"
+          },
+          {
+            "name": "Túi Đựng Máy Ảnh"
+          },
+          {
+            "name": "Túi và Hộp Đựng Máy Quay"
+          },
+          {
+            "name": "Túi và Hộp Đựng Máy Ảnh"
+          },
+          {
+            "name": "Hộp Đựng Filter"
+          }
+        ]
+      },
+      {
+        "name": "Ống kính - Ống ngắm",
+        "children": [
+          {
+            "name": "Ống Nhòm"
+          },
+          {
+            "name": "Ống Ngắm"
+          },
+          {
+            "name": "Kính Hiển Vi"
+          },
+          {
+            "name": "Kính Nhìn Đêm"
+          },
+          {
+            "name": "Kính Viễn Vọng - Kính Thiên Văn"
+          },
+          {
+            "name": "Phụ Kiện Ống Kính, Ống Ngắm"
+          }
+        ]
+      },
+      {
+        "name": "Ống kính (Lens)",
+        "children": [
+          {
+            "name": "Ống Nhòm"
+          },
+          {
+            "name": "Ống Ngắm"
+          },
+          {
+            "name": "Kính Hiển Vi"
+          },
+          {
+            "name": "Kính Nhìn Đêm"
+          },
+          {
+            "name": "Kính Viễn Vọng - Kính Thiên Văn"
+          },
+          {
+            "name": "Phụ Kiện Ống Kính, Ống Ngắm"
+          }
+        ]
+      },
+      {
+        "name": "Thiết bị ánh sáng",
+        "children": [
+          {
+            "name": "Đèn Chiếu Sáng Studio"
+          },
+          {
+            "name": "Máy Đo Sáng và Phụ Kiện"
+          },
+          {
+            "name": "Đèn Flash và Phụ Kiện"
+          },
+          {
+            "name": "Thiết Bị Phản Sáng và Phụ Kiện"
+          }
+        ]
+      },
+      {
+        "name": "Thiết bị quay phim",
+        "children": [
+          {
+            "name": "Máy Quay Phim"
+          },
+          {
+            "name": "Máy Quay Phim Chuyên Dụng"
+          },
+          {
+            "name": "Micro Cho Máy Quay"
+          },
+          {
+            "name": "Phụ Kiện Máy Quay Khác"
+          }
+        ]
+      },
+      {
+        "name": "Camera giám sát",
+        "children": [
+          {
+            "name": "Camera IP"
+          },
+          {
+            "name": "Camera Quan Sát Analog"
+          },
+          {
+            "name": "Đầu Ghi Hình Camera"
+          },
+          {
+            "name": "Hệ Thống Camera Giám Sát"
+          },
+          {
+            "name": "Phụ Kiện Camera Giám Sát"
+          }
+        ]
+      },
+      {
+        "name": "Máy bay Camera và phụ kiện",
+        "children": [
+          {
+            "name": "Máy Bay Camera - Drone"
+          },
+          {
+            "name": "Phụ Kiện Máy Bay Camera - Drone"
+          },
+          {
+            "name": "Linh Kiện Thay Thế Máy Bay camera - Drone"
+          }
+        ]
+      },
+      {
+        "name": "Camera hành trình - Action Camera và Phụ kiện",
+        "children": [
+          {
+            "name": "Action Camera"
+          },
+          {
+            "name": "Phụ Kiện Camera Hành Trình"
+          },
+          {
+            "name": "Camera Hành Trình Ô Tô, Xe Máy"
+          }
+        ]
+      }
+    ]
+  }
+]
+

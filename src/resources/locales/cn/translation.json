@@ -1,0 +1,111 @@
+{
+  "is.required": "Không được bỏ trống",
+  "no.space": "Không được được có dấu cách",
+  "is.string": "Bao gồm cả chữ và số",
+  "phone.is.not.verified": "Số điện thoại chưa được xác nhận",
+  "email.is.exists": "Email đã tồn tại",
+  "invalid":{
+    "category": "Category không hợp lệ ",
+    "price": "Khoảng giá không hợp lệ",
+    "credentials": "Thông tin xác thực không đúng",
+    "phone.number": "Số điện thoại không đúng",
+    "password": "Mật khẩu không chính xác",
+    "code": "Mã không đúng",
+    "phone.credentials": "Số điện thoại chưa được đăng ký",
+    "product":"Sản phẩm không hợp lệ",
+    "brand": "Tên shop không hợp lệ. Tối thiểu 6 ký tự và tối đa 30 ký tự",
+    "cart": "Danh mục giỏ hàng khôngg hợp lệ",
+    "quantity": "Hết hàng",
+    "type": "Phân loại không đúng",
+    "id": "Định dạng ID không đúng",
+    "order": "Không tìm thấy đơn hàng",
+    "status": "Không đúng trạng thái",
+    "shipment": "Không tìm thấy đơn giao"
+  },
+  "profile":{
+      "updated": "Cập nhật thông tin thành công",
+      "password": {
+        "dont.match" : "Mật khẩu nhập lại không chính xác",
+        "success": "Cập nhật mật khẩu thành công"
+      },
+      "username": {
+        "is.change": "Tên đăng nhập đã được thay đổi",
+        "exists": "Tên đăng nhập đã hoàn thành rồi"
+      }
+    } ,
+  "otp": {
+    "sent": "Đã gửi OTP",
+    "successfully": "Xác thực OTP thành công"
+  },
+  "register":{
+    "successfully": "Đăng ký tài khoản thành công",
+    "already.exists.phone.number": "Số điện thoại đã tồn tại"
+  },
+  "login":{
+    "not.exists.phone.number": "Số điện thoại chưa được đăng ký"
+  },
+  "category":{
+    "created": "Tạo thành công sản phẩm",
+    "updated": "Cập nhật thành công",
+    "deleted": "Xoá thành công"
+  },
+  "product":{
+    "created": "Tạo sản phẩm thành công",
+    "updated": "Cập nhật sản phẩm thành công",
+    "deleted": "Xóa sản phẩm thành công",
+    "restore": "Khôi phục thành công"
+  },
+  "password.is.not.created": "Tài khoản chưa được đặt mật khẩu",
+  "create":{
+    "add": {
+      "error": "Tạo địa chỉ không không thành công"
+    },
+    "vendor": {
+        "error": "Tạo kênh bán hàng không thành công",
+        "success": "Tạo kênh bán hàng thành công"
+    }
+  },
+  "user": {
+    "notFound": "Người dùng không tồn tại"
+  },
+  "address": {
+    "notFound": "Địa chỉ không tồn tại"
+  },
+  "order":{
+    "success": "Tạo đơn hàng thành công",
+    "cancel": "Hủy đơn hàng thành công",
+    "cannot": {
+      "cancel": "Hủy đơn hàng thất bại"
+    },
+    "updated": {
+      "success": "Cập nhật đơn thành công"
+    }
+  },
+  "cart":{
+    "add":{
+      "success": "Thêm giỏ hàng thành công",
+      "error": "Thêm giỏ hàng không thành công"
+    }
+  },
+  "update.successfully": "Cập nhật thành công",
+  "delete.cart.success": "Xóa sản phẩm khỏi giỏ hàng thành công",
+  "cartItem.notFound": "Giỏ hàng không tồn tại",
+  "paymentMethod": {
+    "delete": {
+      "success": "Xóa phương thức thanh toán thành công" 
+    },
+    "create": {
+      "success": "Tạo phương thức thanh toán thành công"
+    },
+    "update": {
+      "success": "Sửa phương thức thanh toán thành công"
+    },
+    "setDefault":{
+      "success": "Cài đặt phương thức thanh toán mặc định thành công"
+    },
+    "notFound": "Phương thức thanh toán không tồn tại"
+  },
+  "page": {
+    "notFound": "Trang không tồn tại"
+  }
+}

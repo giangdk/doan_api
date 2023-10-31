@@ -1,0 +1,755 @@
+openapi: 3.0.1
+info:
+  title: EWORLD-BETA
+  description: ''
+  contact:
+    email: jerryle.vn@gmail.com
+  version: 0.0.1
+servers:
+- url: http://localhost:3001/api
+- url: http://petstore.swagger.io/v2
+tags:
+- name: auth
+  description: Đăng ký/đăng nhập tài khoản
+- name: category
+  description: Danh mục
+- name: vendor
+  description: Liên quan đến cơ sở kinh doanh - Vendor
+paths:
+  /auth/register/:
+    post:
+      tags:
+      - auth
+      summary: Tạo tài khoản mới
+      operationId: register
+      requestBody:
+        description: Nội dung body để tạo tài khoản
+        content:
+          application/json:
+            schema:
+              required:
+              - phone
+              - fullName
+              - password
+              type: object
+              properties:
+                phone:
+                  type: string
+                fullName:
+                  type: string
+                password:
+                  type: string
+            example:
+              phone: '84888253235'
+              fullName: Check
+              password: '123456'
+        required: true
+      responses:
+        200:
+          description: Đăng ký thành công không trùng SĐT
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data: null
+                status: 200
+                message: OTP sent.
+                errors: null
+        400:
+          description: Không thành công vì trùng số điện thoại
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data: null
+                status: 400
+                message: This phone is already exist
+                errors: null
+  /auth/register-otp/:
+    post:
+      tags:
+      - auth
+      summary: Validate mã OTP để đăng ký tài khoản
+      operationId: registerOtp
+      requestBody:
+        description: Nội dung
+        content:
+          application/json:
+            schema:
+              required:
+              - phone
+              - code
+              type: object
+              properties:
+                phone:
+                  type: string
+                code:
+                  type: string
+            example:
+              phone: '0975234889'
+              code: '0050'
+        required: true
+      responses:
+        200:
+          description: Không trùng SĐT và validate code OTP thành công
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data:
+                  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYmFiMzliN2JmODdmYmMwNzg4ODBkYiIsImlhdCI6MTYzOTYyNTYyNywiZXhwIjoxNjcxMTYxNjI3fQ.J3lSgt04G4x-r5us7RtRHpV3Mx9auVCaMWxHrRpX88U
+                  userId: 61bab39b7bf87fbc078880db
+                  account:
+                    profile:
+                      fullName: Check
+                    phone: '+84888253236'
+                    type: customer
+                    authentication:
+                      lock: false
+                      status: false
+                      isPhoneVerified: true
+                    _id: 61bab39b7bf87fbc078880db
+                    createdAt: '2021-12-16T03:33:47.780Z'
+                    updatedAt: '2021-12-16T03:33:47.780Z'
+                status: 200
+                message: Register successfully
+                errors: null
+        400:
+          description: Không thành công vì trùng số điện thoại
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data: null
+                status: 400
+                message: Code is not valid
+                errors: null
+  /auth/login/:
+    post:
+      tags:
+      - auth
+      summary: Đăng nhập tài khoản
+      operationId: login
+      requestBody:
+        description: Nội dung body đăng nhập
+        content:
+          application/json:
+            schema:
+              required:
+              - phone
+              - password
+              type: object
+              properties:
+                phone:
+                  type: string
+                password:
+                  type: string
+            example:
+              phone: '0888253235'
+              password: '123456'
+        required: true
+      responses:
+        200:
+          description: Đăng ký thành công không trùng SĐT
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data: null
+                status: 200
+                message: OTP sent.
+                errors: null
+        500:
+          description: Không thành công vì trùng số điện thoại
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data: null
+                status: 500
+                message: This phone is already exist
+                errors: null
+  /categories/:
+    get:
+      tags:
+      - category
+      summary: Danh sách hot vendors & suggest vendors
+      operationId: categoriesMain
+      parameters:
+      - name: cat
+        in: query
+        description: Tên danh mục nếu cần lọc danh sách vendor
+        schema:
+          $ref: '#/components/schemas/Category'
+      - name: lat
+        in: query
+        description: Toạ độ latitude min -90 max 90
+        schema:
+          $ref: '#/components/schemas/Lat'
+      - name: lng
+        in: query
+        description: Toạ độ long min -180 max 180
+        schema:
+          $ref: '#/components/schemas/Lng'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data:
+                  services:
+                    - id: RESTAURANT
+                      name: Restaurant
+                      image: http://192.168.1.12:3001/images/icons/category/restaurant.png
+                    - id: MASSAGE
+                      name: Massage
+                      image: http://192.168.1.12:3001/images/icons/category/massage.png
+                    - id: BAR
+                      name: Bar
+                      image: http://192.168.1.12:3001/images/icons/category/bar.png
+                    - id: KARAOKE
+                      name: Karaoke
+                      image: http://192.168.1.12:3001/images/icons/category/karaoke.png
+                  hotVendors:
+                    - _id: 61b96766daf4bc4e23a6ada0
+                      category: KARAOKE
+                      attributes:
+                        - _id: 619b440087424246089a8484
+                          name: Wifi
+                          image: /images/icons/wifi.png
+                          priority: 0
+                          type: general
+                        - _id: 619b444187424246089a8486
+                          name: Glass Wine
+                          image: /images/icons/glass-wine.png
+                          priority: 0
+                          type: general
+                        - _id: 619b445487424246089a8488
+                          name: Mircophone Variant
+                          image: /images/icons/microphone-variant.png
+                          priority: 0
+                          type: general
+                        - _id: 619b446787424246089a848a
+                          name: Parking
+                          image: /images/icons/parking.png
+                          priority: 0
+                          type: general
+                        - _id: 619b447087424246089a848c
+                          name: Television
+                          image: /images/icons/television.png
+                          priority: 0
+                          type: general
+                      brandName: Karaoke Monaco KTV
+                      address:
+                        fullAddress: 94 Lê Đức Thọ, Phường Mỹ Đình 2, Nam Từ Liêm, Hà Nội
+                        location:
+                          type: Point
+                          coordinates:
+                            - 105.76890520689993
+                            - 21.028516460850323
+                      totalReviews: 0
+                      avgRating: 0
+                      categoryImage: http://192.168.1.12:3001/images/icons/category/karaoke.png
+                  suggestedVendors:
+                    - _id: 61b96766daf4bc4e23a6ada0
+                      category: KARAOKE
+                      attributes:
+                        - _id: 619b440087424246089a8484
+                          name: Wifi
+                          image: /images/icons/wifi.png
+                          priority: 0
+                          type: general
+                        - _id: 619b444187424246089a8486
+                          name: Glass Wine
+                          image: /images/icons/glass-wine.png
+                          priority: 0
+                          type: general
+                        - _id: 619b445487424246089a8488
+                          name: Mircophone Variant
+                          image: /images/icons/microphone-variant.png
+                          priority: 0
+                          type: general
+                        - _id: 619b446787424246089a848a
+                          name: Parking
+                          image: /images/icons/parking.png
+                          priority: 0
+                          type: general
+                        - _id: 619b447087424246089a848c
+                          name: Television
+                          image: /images/icons/television.png
+                          priority: 0
+                          type: general
+                      brandName: Karaoke Monaco KTV
+                      address:
+                        fullAddress: 94 Lê Đức Thọ, Phường Mỹ Đình 2, Nam Từ Liêm, Hà Nội
+                        location:
+                          type: Point
+                          coordinates:
+                            - 105.76890520689993
+                            - 21.028516460850323
+                      totalReviews: 0
+                      avgRating: 0
+                      categoryImage: http://192.168.1.12:3001/images/icons/category/karaoke.png
+                status: 200
+                message: success
+                errors: null
+  /categories/{cat}/vendors/:
+    get:
+      tags:
+      - category
+      deprecated: true
+      summary: Danh sách vendors theo category [DEPRECATED]
+      operationId: categoriesTwo
+      parameters:
+      - name: cat
+        in: path
+        description: Tên danh mục nếu cần lọc danh sách vendor
+        required: true
+        schema:
+          $ref: '#/components/schemas/Category'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data:
+                  services:
+                    - id: RESTAURANT
+                      name: Restaurant
+                      image: http://192.168.1.12:3001/images/icons/category/restaurant.png
+                    - id: MASSAGE
+                      name: Massage
+                      image: http://192.168.1.12:3001/images/icons/category/massage.png
+                    - id: BAR
+                      name: Bar
+                      image: http://192.168.1.12:3001/images/icons/category/bar.png
+                    - id: KARAOKE
+                      name: Karaoke
+                      image: http://192.168.1.12:3001/images/icons/category/karaoke.png
+                  hotVendors:
+                    - _id: 61b96766daf4bc4e23a6ada0
+                      category: KARAOKE
+                      attributes:
+                        - _id: 619b440087424246089a8484
+                          name: Wifi
+                          image: /images/icons/wifi.png
+                          priority: 0
+                          type: general
+                        - _id: 619b444187424246089a8486
+                          name: Glass Wine
+                          image: /images/icons/glass-wine.png
+                          priority: 0
+                          type: general
+                        - _id: 619b445487424246089a8488
+                          name: Mircophone Variant
+                          image: /images/icons/microphone-variant.png
+                          priority: 0
+                          type: general
+                        - _id: 619b446787424246089a848a
+                          name: Parking
+                          image: /images/icons/parking.png
+                          priority: 0
+                          type: general
+                        - _id: 619b447087424246089a848c
+                          name: Television
+                          image: /images/icons/television.png
+                          priority: 0
+                          type: general
+                      brandName: Karaoke Monaco KTV
+                      address:
+                        fullAddress: 94 Lê Đức Thọ, Phường Mỹ Đình 2, Nam Từ Liêm, Hà Nội
+                        location:
+                          type: Point
+                          coordinates:
+                            - 105.76890520689993
+                            - 21.028516460850323
+                      totalReviews: 0
+                      avgRating: 0
+                      categoryImage: http://192.168.1.12:3001/images/icons/category/karaoke.png
+                  suggestedVendors:
+                    - _id: 61b96766daf4bc4e23a6ada0
+                      category: KARAOKE
+                      attributes:
+                        - _id: 619b440087424246089a8484
+                          name: Wifi
+                          image: /images/icons/wifi.png
+                          priority: 0
+                          type: general
+                        - _id: 619b444187424246089a8486
+                          name: Glass Wine
+                          image: /images/icons/glass-wine.png
+                          priority: 0
+                          type: general
+                        - _id: 619b445487424246089a8488
+                          name: Mircophone Variant
+                          image: /images/icons/microphone-variant.png
+                          priority: 0
+                          type: general
+                        - _id: 619b446787424246089a848a
+                          name: Parking
+                          image: /images/icons/parking.png
+                          priority: 0
+                          type: general
+                        - _id: 619b447087424246089a848c
+                          name: Television
+                          image: /images/icons/television.png
+                          priority: 0
+                          type: general
+                      brandName: Karaoke Monaco KTV
+                      address:
+                        fullAddress: 94 Lê Đức Thọ, Phường Mỹ Đình 2, Nam Từ Liêm, Hà Nội
+                        location:
+                          type: Point
+                          coordinates:
+                            - 105.76890520689993
+                            - 21.028516460850323
+                      totalReviews: 0
+                      avgRating: 0
+                      categoryImage: http://192.168.1.12:3001/images/icons/category/karaoke.png
+                status: 200
+                message: success
+                errors: null
+  /vendors:
+    get:
+      tags:
+      - vendor
+      summary: Tìm kiếm danh sách vendor theo query
+      operationId: searchVendorsWithFilter
+      parameters:
+      - name: cat
+        in: query
+        description: Tên danh mục nếu cần lọc danh sách vendor
+        schema:
+          $ref: '#/components/schemas/Category'
+      - name: lat
+        in: query
+        description: Toạ độ latitude min -90 max 90
+        schema:
+          $ref: '#/components/schemas/Lat'
+      - name: lng
+        in: query
+        description: Toạ độ long min -180 max 180
+        schema:
+          $ref: '#/components/schemas/Lng'
+      - name: t
+        in: query
+        description: Tìm kiếm theo tên hoặc nội dung liên quan
+        schema:
+          type: string
+      - name: attributes
+        in: query
+        description: Danh sách id attribute ngăn cách nhau bởi dấu ","
+        schema:
+          $ref: '#/components/schemas/Attributes'
+      - name: page
+        in: query
+        description: Số page để phân trang
+        schema:
+          type: number
+          minimum: 1
+      - name: limit
+        in: query
+        description: Giới hạn số lượng item mỗi trang
+        schema:
+          type: number
+          minimum: 1
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data:
+                  docs:
+                    - _id: 61b96766daf4bc4e23a6ada0
+                      owner: 61b96766daf4bc4e23a6ad9e
+                      category: KARAOKE
+                      attributes:
+                        - _id: 619b440087424246089a8484
+                          name: Wifi
+                          image: /images/icons/wifi.png
+                          priority: 0
+                          type: general
+                        - _id: 619b444187424246089a8486
+                          name: Glass Wine
+                          image: /images/icons/glass-wine.png
+                          priority: 0
+                          type: general
+                        - _id: 619b445487424246089a8488
+                          name: Mircophone Variant
+                          image: /images/icons/microphone-variant.png
+                          priority: 0
+                          type: general
+                        - _id: 619b446787424246089a848a
+                          name: Parking
+                          image: /images/icons/parking.png
+                          priority: 0
+                          type: general
+                        - _id: 619b447087424246089a848c
+                          name: Television
+                          image: /images/icons/television.png
+                          priority: 0
+                          type: general
+                      brandName: Karaoke Monaco KTV
+                      address:
+                        fullAddress: 94 Lê Đức Thọ, Phường Mỹ Đình 2, Nam Từ Liêm, Hà Nội
+                        location:
+                          type: Point
+                          coordinates:
+                            - 105.76890520689993
+                            - 21.028516460850323
+                      totalReviews: 0
+                      avgRating: 0
+                  totalDocs: 1
+                  limit: 2
+                  page: 1
+                  totalPages: 1
+                  pagingCounter: 1
+                  hasPrevPage: false
+                  hasNextPage: false
+                  prevPage: null
+                  nextPage: null
+                status: 200
+                message: success
+                errors: null
+  /vendors/:
+    get:
+      tags:
+      - vendor
+      summary: Tìm kiếm danh sách vendor theo cat hoặc không
+      deprecated: true
+      operationId: listVendors
+      parameters:
+      - name: cat
+        in: query
+        description: Tên danh mục nếu cần lọc danh sách vendor
+        schema:
+          $ref: '#/components/schemas/Category'
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data:
+                  docs:
+                    - _id: 61b96766daf4bc4e23a6ada0
+                      owner: 61b96766daf4bc4e23a6ad9e
+                      category: KARAOKE
+                      attributes:
+                        - _id: 619b440087424246089a8484
+                          name: Wifi
+                          image: /images/icons/wifi.png
+                          priority: 0
+                          type: general
+                        - _id: 619b444187424246089a8486
+                          name: Glass Wine
+                          image: /images/icons/glass-wine.png
+                          priority: 0
+                          type: general
+                        - _id: 619b445487424246089a8488
+                          name: Mircophone Variant
+                          image: /images/icons/microphone-variant.png
+                          priority: 0
+                          type: general
+                        - _id: 619b446787424246089a848a
+                          name: Parking
+                          image: /images/icons/parking.png
+                          priority: 0
+                          type: general
+                        - _id: 619b447087424246089a848c
+                          name: Television
+                          image: /images/icons/television.png
+                          priority: 0
+                          type: general
+                      brandName: Karaoke Monaco KTV
+                      address:
+                        fullAddress: 94 Lê Đức Thọ, Phường Mỹ Đình 2, Nam Từ Liêm, Hà Nội
+                        location:
+                          type: Point
+                          coordinates:
+                            - 105.76890520689993
+                            - 21.028516460850323
+                      totalReviews: 0
+                      avgRating: 0
+                  totalDocs: 1
+                  limit: 2
+                  page: 1
+                  totalPages: 1
+                  pagingCounter: 1
+                  hasPrevPage: false
+                  hasNextPage: false
+                  prevPage: null
+                  nextPage: null
+                status: 200
+                message: success
+                errors: null     
+  /vendors/{vendorId}:
+    get:
+      tags:
+      - vendor
+      summary: Lấy thông tin chi tiết CSKD - Vendor theo vendor Id
+      operationId: getVendorDetails
+      parameters:
+      - name: vendorId
+        in: path
+        required: true
+        description: ID của vendor
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data:
+                  address:
+                    location:
+                      type: Point
+                      coordinates:
+                        - 105.76890520689993
+                        - 21.028516460850323
+                    fullAddress: 94 Lê Đức Thọ, Phường Mỹ Đình 2, Nam Từ Liêm, Hà Nội
+                  _id: 61b96766daf4bc4e23a6ada0
+                  owner:
+                    profile:
+                      fullName: Mỹ Nhân
+                    _id: 61b96766daf4bc4e23a6ad9e
+                    phone: '+84888253235'
+                    type: vendor
+                    createdAt: '2021-12-15T03:56:22.277Z'
+                    updatedAt: '2021-12-15T03:56:22.277Z'
+                  category: KARAOKE
+                  attributes:
+                    - category: MASSAGE
+                      cost: 0
+                      _id: 619b440087424246089a8484
+                      name: Wifi
+                      description: ''
+                      image: /images/icons/wifi.png
+                      priority: 0
+                      type: general
+                      imageUrl: http://192.168.1.12:3001/images/icons/wifi.png
+                    - category: MASSAGE
+                      cost: 0
+                      _id: 619b444187424246089a8486
+                      name: Glass Wine
+                      description: ''
+                      image: /images/icons/glass-wine.png
+                      priority: 0
+                      type: general
+                      imageUrl: http://192.168.1.12:3001/images/icons/glass-wine.png
+                    - category: MASSAGE
+                      cost: 0
+                      _id: 619b445487424246089a8488
+                      name: Mircophone Variant
+                      description: ''
+                      image: /images/icons/microphone-variant.png
+                      priority: 0
+                      type: general
+                      imageUrl: http://192.168.1.12:3001/images/icons/microphone-variant.png
+                    - category: MASSAGE
+                      cost: 0
+                      _id: 619b446787424246089a848a
+                      name: Parking
+                      description: ''
+                      image: /images/icons/parking.png
+                      priority: 0
+                      type: general
+                      imageUrl: http://192.168.1.12:3001/images/icons/parking.png
+                    - category: MASSAGE
+                      cost: 0
+                      _id: 619b447087424246089a848c
+                      name: Television
+                      description: ''
+                      image: /images/icons/television.png
+                      priority: 0
+                      type: general
+                      imageUrl: http://192.168.1.12:3001/images/icons/television.png
+                  gallery: []
+                  brandName: Karaoke Monaco KTV
+                  products: []
+                  categoryImage: http://192.168.1.12:3001/images/icons/category/karaoke.png
+                status: 200
+                message: success
+                errors: null
+        404:
+          description: Không tìm thấy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+              example:
+                data: null
+                status: 404
+                message: Invalid resource
+                errors: null
+components:
+  schemas:
+    Attributes:
+      type: string
+    Lat:
+      type: number
+      minimum: -90
+      maximum: 90
+    Lng:
+      type: number
+      minimum: -180
+      maximum: 180
+    Category:
+      type: string
+      enum:
+      - RESTAURANT
+      - MASSAGE
+      - BAR
+      - KARAOKE
+    ApiResponse:
+      type: object
+      properties:
+        data:
+          oneOf:
+            - type: object
+              nullable: true
+            - type: array
+              nullable: true
+              items:
+                type: object
+        status:
+          type: integer
+          format: int32
+        errors:
+          nullable: true
+          oneOf:
+            - type: object
+              nullable: true
+            - type: array
+              nullable: true
+              items:
+                type: object
+        message:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+

@@ -1,0 +1,19 @@
+{
+  "invalid": {
+    "address": "invalid.address"
+  },
+  "already": {
+    "exists": {
+      "phone": {
+        "number": "already.exists.phone.number"
+      }
+    }
+  },
+  "livestream": {
+    "created": "livestream.created",
+    "updated": "livestream.updated",
+    "update": {
+      "successfully": "livestream.update.successfully"
+    }
+  }
+}

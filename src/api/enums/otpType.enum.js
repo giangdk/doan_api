@@ -1,0 +1,5 @@
+export default {
+  REGISTRATION: 'REG',
+  LOGIN: 'LOGIN',
+  RECOVER_PASSWORD: 'RECOVER_PASSWORD'
+};
