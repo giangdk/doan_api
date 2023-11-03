@@ -14,6 +14,10 @@
     "updated": "livestream.updated",
     "update": {
       "successfully": "livestream.update.successfully"
+    },
+    "error": "livestream.error",
+    "end": {
+      "successfully": "livestream.end.successfully"
     }
   }
 }

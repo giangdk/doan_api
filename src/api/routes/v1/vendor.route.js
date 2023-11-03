@@ -23,10 +23,13 @@ router
   .post(authorize(accountTypeEnum.CUSTOMER), applyVendorRules(), validate, vendor.applyVendor);
 router
   .route('/create-livestream')
-  .post(vendor.createLiveStream);
+  .post(authorize(accountTypeEnum.VENDOR), vendor.createLiveStream);
 router
   .route('/update-livestream')
-  .post(vendor.updateLiveStream);
+  .post(authorize(accountTypeEnum.VENDOR), vendor.updateLiveStream);
+router
+  .route('/end-livestream')
+  .get(authorize(accountTypeEnum.VENDOR), vendor.endLiveStream);
 router
   .route('/get-livestream')
   .get(vendor.getListLiveStream);

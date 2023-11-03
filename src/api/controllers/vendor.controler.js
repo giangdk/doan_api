@@ -114,12 +114,19 @@ export default {
     try {
       const {
         key,
-        imageUrl,
+
       } = req.body;
+      const id = req.user._id;
+      console.log("giang user" + id)
+      const getProfile = await Vendor.findOne({ owner: id });
+      console.log("giang createLiveStream" + getProfile)
+      if (getProfile == null) {
+        return res.json(Response.error("không tìm thấy vendor"));
+      }
       await LiveStream.create({
-        imageUrl: imageUrl,
+        imageUrl: getProfile.avatar || getProfile.gallery[0].path || "giang.com",
         key: key,
-        vendor: '651ee6e1fc6fe4a5c0741995',
+        vendor: getProfile._id,
         isExpired: false
       });
       return res.json(Response.success(null, req.t('livestream.created')));
@@ -175,6 +182,41 @@ export default {
       if (!update) return res.json(Response.badRequest(req.t('livestream.error')));
 
       return res.json(Response.success(req.t('livestream.update.successfully')));
+
+    } catch (err) {
+      console.error(err);
+      return next(err);
+    }
+  },
+  endLiveStream: async (req, res, next) => {
+    try {
+      const {
+
+      } = req.body;
+      const id = req.user._id;
+      console.log("giang user" + id)
+      const getProfile = await Vendor.findOne({ owner: id });
+      console.log("giang Vendor Model" + getProfile)
+      if (getProfile == null) {
+        return res.json(Response.error("không tìm thấy vendor"));
+      }
+      while (1) {
+        var update = await LiveStream.findOneAndUpdate(
+          { vendor: getProfile._id, isExpired: false },
+          {
+            $set: {
+              isExpired: true
+            }
+          },
+          { new: true }
+        );
+        if (!update) break;
+      }
+
+
+
+
+      return res.json(Response.success(req.t('livestream.end.successfully')));
 
     } catch (err) {
       console.error(err);
