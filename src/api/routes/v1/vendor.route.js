@@ -31,6 +31,9 @@ router
   .route('/end-livestream')
   .get(authorize(accountTypeEnum.VENDOR), vendor.endLiveStream);
 router
+  .route('/list-product')
+  .get(authorize(accountTypeEnum.VENDOR), vendor.getListProductInVendor);
+router
   .route('/get-livestream')
   .get(vendor.getListLiveStream);
 router.get('/brands', vendor.getBrand);
