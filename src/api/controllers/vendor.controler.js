@@ -223,6 +223,30 @@ export default {
       return next(err);
     }
   },
+  getListProductInVendor: async (req, res, next) => {
+    try {
+      const {
+
+      } = req.body;
+      const id = req.user._id;
+      console.log("giang user" + id)
+      const getProfile = await Vendor.findOne({ owner: id });
+      console.log("giang Vendor Model" + getProfile)
+      if (getProfile == null) {
+        return res.json(Response.error("không tìm thấy vendor"));
+      }
+      const products = await Product.find({ vendor: getProfile._id });
+
+
+
+
+      return res.json(Response.success(products));
+
+    } catch (err) {
+      console.error(err);
+      return next(err);
+    }
+  },
   updateProfile: async (req, res, next) => {
     const { brandName, description, images } = req.body;
     let updateQuery = {};
