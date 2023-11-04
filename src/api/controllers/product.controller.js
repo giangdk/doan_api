@@ -198,7 +198,7 @@ export default {
             },
             discount: discount / 100,
             media: {
-              featuredImage: "https://cdn.alongwalk.info/wp-content/uploads/2022/04/05000455/image-nhung-dieu-thu-vi-ve-ngon-ngu-tai-vuong-quoc-anh-164906669525225.jpg" || images[0].path || null,
+              featuredImage: insertObj[0].path || "null.com",
               data: insertObj
             },
             variants: productVariants
