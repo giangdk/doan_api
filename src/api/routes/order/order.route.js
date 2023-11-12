@@ -462,19 +462,69 @@ router.route('/').post(createCheckoutRules(), validate, async (req, res, next) =
   }
 });
 
-router.route('/:id/cancel').put(updateStatusOrderRules(), validate, async (req, res, next) => {
+router.route('/:id/transit').put(updateStatusOrderRules(), validate, async (req, res, next) => {
   try {
     const isUser = await Account.exists({ _id: req.user._id });
 
+    console.log("/:id/transit " + isUser)
     if (!isUser) return res.json(Response.notFound());
 
     const { id } = req.params;
 
     const { reason } = req.body;
+    console.log("/:id/transit 1")
+    const order = await Order.findOne({
+      _id: id,
+      // status: { $in: [orderStatusEnum.PICKUP_AVAILABLE, orderStatusEnum.AWAITING_CONFIRMATION] }
+    });
+    console.log("/:id/transit " + order)
+    if (!order) return res.json(Response.badRequest(req.t('order.cannot.cancel')));
+
+    async
+      .parallel({
+        activity: (cb) => {
+          OrderActivity.create({
+            order: order._id,
+            issuer: req.user._id,
+            state: activityState.ORDER_INTRANSIT,
+            reason: reason
+          }).then((resp) => cb(null, resp));
+        },
+        orderUpdate: (cb) => {
+          Order.findByIdAndUpdate(id, {
+            $set: {
+              // listType: orderListTypeEnum.CANCELLED_TORESPONSE,
+              status: orderStatusEnum.INTRANSIT
+            }
+          }).then((resp) => cb(null, resp));
+        }
+      })
+      .then((result) => {
+        const { orderUpdate } = result;
+        return res.json(Response.success({ _id: id }, null));
+      });
+  } catch (e) {
+    console.log(e);
+    return next(e);
+  }
+});
+
+router.route('/:id/cancel').put(updateStatusOrderRules(), validate, async (req, res, next) => {
+  try {
+    const isUser = await Account.exists({ _id: req.user._id });
+
+    console.log("/:id/cancel " + isUser)
+    if (!isUser) return res.json(Response.notFound());
+
+    const { id } = req.params;
+
+    const { reason } = req.body;
+    console.log("/:id/cancel 1")
     const order = await Order.findOne({
       _id: id,
       status: { $in: [orderStatusEnum.PICKUP_AVAILABLE, orderStatusEnum.AWAITING_CONFIRMATION] }
     });
+    console.log("/:id/cancel " + order)
     if (!order) return res.json(Response.badRequest(req.t('order.cannot.cancel')));
 
     async
@@ -670,7 +720,69 @@ router.route('/pre-voucher').post(preVoucherCheckoutRules(), validate, async (re
     console.log(e);
   }
 });
+router.route('/shop-manager-order').get(async (req, res, next) => {
+  try {
+    const { limit, page, status, t } = req.query;
+    const options = {
+      page: parseInt(page) || 1,
+      limit: parseInt(limit) || 20,
+      populate: [
+        {
+          path: 'vendor',
+          select: 'brandName',
+          populate: {
+            path: 'owner',
+            select: 'username profile.avatar'
+          }
+        },
+        {
+          path: 'shipment',
+          populate: [
+            {
+              path: 'details',
+              options: {
+                // select: 'title note processedAt createdAt',
+                sort: { createdAt: -1 },
+                limit: 1
+              }
+            }
+          ]
+        }
+      ],
+      sort: { createdAt: -1 }
+    };
+    const idUser = req.user._id;
+    console.log("/shop-manager-order" + idUser)
+    const getProfile = await Vendor.findOne({ owner: idUser });
+    console.log("/shop-manager-order profile:" + getProfile)
+    if (getProfile == null) {
+      return res.json(Response.error("không tìm thấy vendor"));
+    }
+    let queryFilter = {
+      vendor: getProfile._id
+    };
 
+    if (status != null && status.length > 0) {
+      queryFilter = {
+        ...queryFilter,
+        status
+      };
+    }
+
+    if (t != null && t.length > 0) {
+      queryFilter = {
+        ...queryFilter,
+        $text: { $search: text }
+      };
+    }
+
+    const orders = await Order.paginate(queryFilter, options);
+
+    return res.json(Response.success(orders, null));
+  } catch (e) {
+    console.log(e);
+  }
+});
 router.route('/listing').get(async (req, res, next) => {
   try {
     const { limit, page, status, t } = req.query;
