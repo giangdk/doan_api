@@ -10,7 +10,7 @@ const homepageController = {
       return async
         .parallel({
           dealsOfTheDay: (cb) => {
-            Product.find({}).sort({ createdAt: -1 }).limit(10).exec(cb);
+            Product.find({}).sort({ createdAt: -1, isDeleted: false }).limit(10).exec(cb);
             // Product.find({ /*discount: { $gt: 0.1 }, */isDeleted: false })
             //   .sort({ createdAt: -1 })
             //   .select('name price media.featuredImage slug discount currencySymbol totalReviews')
@@ -19,7 +19,7 @@ const homepageController = {
 
           },
           top5Products: (cb) => {
-            Product.find({ discount: { $gt: 0.3 }, isDeleted: false })
+            Product.find({ discount: { $gt: 0.3 }, isDeleted: false, })
               .sort({ createdAt: -1 })
               .select('name price media.featuredImage slug discount currencySymbol totalReviews')
               .limit(5)
@@ -33,20 +33,20 @@ const homepageController = {
               .exec(cb);
           },
           dontMissTheseProducts: (cb) => {
-            Product.find({ discount: 0, isDeleted: false })
+            Product.find({ discount: 0, isDeleted: false, })
               .sort({ createdAt: -1 })
               .select('name price media.featuredImage slug discount currencySymbol totalReviews')
               .limit(18)
               .exec(cb);
           },
           leftNewProducts: (cb) => {
-            Product.find({ isDeleted: false, discount: 0 })
+            Product.find({ isDeleted: false, discount: 0, })
               .select('name price media.featuredImage slug discount currencySymbol totalReviews')
               .limit(9)
               .exec(cb);
           },
           rightFeatureProducts: (cb) => {
-            Product.find({ isDeleted: false, discount: 0 })
+            Product.find({ isDeleted: false, discount: 0, })
               .select('name price media.featuredImage slug discount currencySymbol totalReviews')
               .limit(9)
               .exec(cb);
@@ -71,21 +71,21 @@ const homepageController = {
             //   .select('name price media.featuredImage slug discount currencySymbol totalReviews')
             //   .limit(6)
             //   .exec(cb);
-            Product.find({}).sort({ createdAt: -1 }).limit(10).exec(cb);
+            Product.find({}).sort({ createdAt: -1, isDeleted: false, }).limit(10).exec(cb);
             console.log("giang", Product.find({}).sort({ createdAt: -1 }).limit(10).exec(cb));
           },
           flashSales: (cb) => {
-            Product.find({ discount: { $gt: 0.4 }, isDeleted: false })
+            Product.find({ discount: { $gt: 0.4 }, isDeleted: false, })
               .sort({ createdAt: -1 })
               .select('name price media.featuredImage slug discount currencySymbol totalReviews')
               .limit(6)
               .exec(cb);
           },
           stylesOfMe: (cb) => {
-            Product.find({ isDeleted: false })./*skip(12).*/limit(6).exec(cb);
+            Product.find({ isDeleted: false, isDeleted: false, })./*skip(12).*/limit(6).exec(cb);
           },
           productsByCat: (cb) => {
-            Product.find({ isDeleted: false })./*skip(18).*/limit(18).exec(cb);
+            Product.find({ isDeleted: false, isDeleted: false, })./*skip(18).*/limit(18).exec(cb);
           },
           categories: (cb) => {
             Category.find({

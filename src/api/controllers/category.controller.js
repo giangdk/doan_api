@@ -412,7 +412,8 @@ export default {
               { category: id },
               { 'parentCategories.firstLevel': id },
               { 'parentCategories.secondLevel': id }
-            ]
+            ],
+            isDeleted: false,
           })
             .select('_id')
             .exec(cb);

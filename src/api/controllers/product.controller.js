@@ -224,39 +224,22 @@ export default {
         stockCountry,
         stockStatus,
         description,
-        firstLevelCat,
-        secondLevelCat,
-        threeLevelCat,
+        categoryId,
         productBrand,
         images
       } = req.body;
-
+      console.log("giang 1")
       const { id } = req.params;
-      const chooseCategory = threeLevelCat || secondLevelCat || firstLevelCat;
-      if (!chooseCategory) return res.redirect('/');
 
-      const category = await Category.findById(chooseCategory);
+      const category = await Category.findById(categoryId);
       if (!category) return res.json(Response.notFound('Invalid category'));
-
+      console.log("giang 3")
       const vendor = await Vendor.findById(req.user.vendorId);
       if (!vendor) return res.json(Response.notFound('Invalid vendor'));
+      console.log("giang 4")
 
       return async
         .parallel({
-          productVariants: (cb) => {
-            const insertVariants = [];
-
-            if (variants && variants.length > 0) {
-              variants.forEach((x) => {
-                const variant = {
-                  name: x.name,
-                  sizes: x.sizes
-                };
-                insertVariants.push(variant);
-              });
-              ProductVariant.insertMany(insertVariants).then((resp) => cb(null, resp));
-            }
-          },
           insertBrand: (cb) => {
             if (!mongoose.isValidObjectId(productBrand)) {
               Brand.create({
@@ -294,10 +277,7 @@ export default {
                 currencySymbol: currencyUnit,
                 description,
                 category: category._id,
-                parentCategories: {
-                  firstLevel: category.parents?.firstLevel,
-                  secondLevel: category.parents?.secondLevel
-                },
+
                 brand: mongoose.isValidObjectId(productBrand) ? productBrand : insertBrand._id,
                 stock: {
                   quantity,
@@ -338,7 +318,7 @@ export default {
       const checkDelete = await Product.findOne({ _id: id }, { isDeleted: true });
       if (!checkDelete) return res.json(Response.badRequest(req.t('invalid.product')));
       await Product.findByIdAndUpdate(id, { $set: { isDeleted: false } }, { new: true });
-      return res.json(Response.badRequest(req.t('product.restore')));
+      return res.json(Response.success(req.t('product.restore')));
     } catch (error) {
       console.error(error);
       return next(error);

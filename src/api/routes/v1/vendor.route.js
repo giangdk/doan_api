@@ -39,4 +39,9 @@ router
 router.get('/brands', vendor.getBrand);
 router.route('/search').get(searchVendorsByTextRules(), validate, vendor.searchByText);
 router.route("/create-product").post(authorize(accountTypeEnum.VENDOR), product.createProduct)
+router.route('/:id')
+  .put(authorize(accountTypeEnum.VENDOR), product.updateProduct)
+  .delete(authorize(), product.deleteProduct);
+router.route('/:id/restore')
+  .put(authorize(), product.restoreProduct);
 export default router;

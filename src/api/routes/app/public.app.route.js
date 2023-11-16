@@ -24,7 +24,7 @@ router.get('/', async (req, res, next) => {
           Brand.find({}).select('name media.featuredImage').exec(cb);
         },
         dealsOfTheDay: (cb) => {
-          Product.find({}).sort({ createdAt: -1 }).limit(10).exec(cb);
+          Product.find({ isDeleted: false, }).sort({ createdAt: -1 }).limit(10).exec(cb);
           // Product.find({
           //   discount: { $gt: 0.1 },
           //   isDeleted: false,
@@ -36,7 +36,7 @@ router.get('/', async (req, res, next) => {
           //   .exec(cb);n
         },
         flashSales: (cb) => {
-          Product.find({}).sort({ createdAt: -1 }).limit(10).exec(cb);
+          Product.find({ isDeleted: false, }).sort({ createdAt: -1 }).limit(10).exec(cb);
           // Product.find({
           //   discount: { $gt: 0.4 },
           //   isDeleted: false,
@@ -48,7 +48,7 @@ router.get('/', async (req, res, next) => {
           //   .exec(cb);
         },
         stylesOfMe: (cb) => {
-          Product.find({}).sort({ createdAt: -1 }).limit(10).exec(cb);
+          Product.find({ isDeleted: false, }).sort({ createdAt: -1 }).limit(10).exec(cb);
           // Product.find({ isDeleted: false, status: productStatusEnum.PUBLISH })
           //   .select('name price media.featuredImage slug discount currencySymbol totalReviews')
           //   .skip(12)
@@ -56,7 +56,7 @@ router.get('/', async (req, res, next) => {
           //   .exec(cb);
         },
         productsByCat: (cb) => {
-          Product.find({}).sort({ createdAt: -1 }).limit(10).exec(cb);
+          Product.find({ isDeleted: false, }).sort({ createdAt: -1, isDeleted: false, }).limit(10).exec(cb);
           // Product.find({ isDeleted: false, status: productStatusEnum.PUBLISH })
           //   .select('name price media.featuredImage slug discount currencySymbol totalReviews')
           //   .skip(18)
@@ -111,8 +111,8 @@ router.get('/products/:id', async (req, res, next) => {
     const { id } = req.params;
     const product = await Product.findOne({
       _id: id,
-      status: productStatusEnum.PUBLISH,
-      isDeleted: false
+      // status: productStatusEnum.PUBLISH,
+      // isDeleted: false
     })
       .populate('category vendor brand')
       .populate({
