@@ -5,9 +5,7 @@ import Response from '../utils/response.js';
 import Account from '../models/account.model.js';
 import authService from '../services/auth.service.js';
 import otpTypeEnum from '../enums/otpType.enum.js';
-
 const { PhoneNumberFormat, PhoneNumberUtil } = libphone;
-
 const phoneUtil = PhoneNumberUtil.getInstance();
 
 export default {

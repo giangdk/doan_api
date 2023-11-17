@@ -21,6 +21,7 @@ const accountSchema = new Schema(
       dateOfBirth: {
         type: Date
       },
+
       avatar: {
         type: String,
         default: 'https://via.placeholder.com/300x300.jpg?text=mubaha.com'
@@ -36,6 +37,9 @@ const accountSchema = new Schema(
         enum: Object.values(genderEnum),
         default: genderEnum.MALE
       }
+    },
+    numberId: {
+      type: Number,
     },
     username: {
       type: String,

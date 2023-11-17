@@ -14,7 +14,8 @@ import s3 from '../../config/s3.js';
 import productStatusEnum from '../enums/productStatus.enum.js';
 import sortOrderTypeEnum from '../enums/sortOrderType.enum.js';
 import productSortEnum from '../enums/productSort.enum.js';
-
+import Account from '../models/account.model.js';
+import Conversation from '../models/conversations.model.js';
 export default {
   getProductDetail: async (req, res, next) => {
     try {
@@ -90,7 +91,179 @@ export default {
       return next(error);
     }
   },
+  getConversation: async (req, res, next) => {
+    try {
+      var user = req.user;
+      var conversation = await Conversation.find({
+        ownerId: user._id,
+      });
+      console.log("giang getConversation1 : ", conversation.length)
+      if (conversation.length > 0) {
+        var listConversation = []
+        for (const element of conversation) {
+          var owner = await Account.findById(element.ownerId)
+          var guest = await Account.findById(element.guestId)
+          console.log("giang getConversation: ", guest)
+          listConversation.push({
+            "id": element.numberId,
+            "name": guest.profile.fullName,
+            "type": element.type,
+            "myLastSeen": element.myLastSeen,
+            "lastMessage": {
+              "id": 1,
+              "conversationId": 1,
+              "timestamp": 1,
+              "refId": 1,
+              "content": {
+                "type": "TEXT",
+                "text": element.textLastMessage ?? "hello"
+              }
+            },
+            "members": [
+              {
+                "username": owner.profile.fullName,
+                "globalId": owner.numberId,
+                "fullname": owner.profile.fullName,
+                "avatar": owner.profile.avatar
+              }, {
+                "username": guest.profile.fullName,
+                "globalId": guest.numberId,
+                "fullname": guest.profile.fullName,
+                "avatar": guest.profile.avatar
+              }
+            ]
+          })
+        }
+        return res.json(
+          Response.success({
+            listConversation,
+          })
+        );
+      } else {
+        conversation = await Conversation.find({
+          guestId: user._id,
+        });
+        console.log("giang getConversation2 : ", conversation)
+        var listConversation = []
+        for (const element of conversation) {
+          var owner = await Account.findById(element.guestId)
+          var guest = await Account.findById(element.ownerId)
 
+          console.log("giang getConversation guestId2: ", guest)
+          listConversation.push({
+            "id": element.numberId,
+            "name": guest.profile.fullName,
+            "type": element.type,
+            "myLastSeen": element.myLastSeen,
+            "lastMessage": {
+              "id": 1,
+              "conversationId": 1,
+              "timestamp": 1,
+              "refId": 1,
+              "content": {
+                "type": "TEXT",
+                "text": element.textLastMessage ?? "hello"
+              }
+            },
+            "members": [
+              {
+                "username": owner.profile.fullName,
+                "globalId": owner.numberId,
+                "fullname": owner.profile.fullName,
+                "avatar": owner.profile.avatar
+              }, {
+                "username": guest.profile.fullName,
+                "globalId": guest.numberId,
+                "fullname": guest.profile.fullName,
+                "avatar": guest.profile.avatar
+              }
+            ]
+          })
+        }
+        return res.json(
+          Response.success({
+            listConversation,
+          })
+        );
+      }
+
+    } catch (err) {
+      console.error(err);
+      return next(err);
+    }
+  },
+  createConversation: async (req, res, next) => {
+    try {
+      const {
+        ownerId,
+        guestId,
+      } = req.body;
+      const owner = await Account.findOne({ _id: ownerId });
+      var ownerNumberId;
+      if (owner.numberId == null) {
+        ownerNumberId = getRandomInt(1, 9999999);
+        await Account.updateOne({ _id: owner._id }, { $set: { numberId: ownerNumberId } });
+      } else {
+        ownerNumberId = owner.numberId;
+      }
+      const guest = await Account.findOne({ _id: guestId });
+      var guestNumberId;
+      if (guest.numberId == null) {
+        guestNumberId = getRandomInt(1, 9999999);
+        await Account.updateOne({ _id: guest._id }, { $set: { numberId: guestNumberId } });
+      } else {
+        guestNumberId = guest.numberId;
+      }
+      const numberId = getRandomInt(1, 9999999);
+
+      await Conversation.create({
+        numberId: numberId,
+        name: guest.name,
+        myLastSeen: 0,
+        ownerId: owner._id,
+        guestId: guest._id,
+        textLastMessage: "hello",
+
+      })
+
+      return res.json(
+        Response.success({
+
+        })
+      );
+    } catch (err) {
+      console.error(err);
+      return next(err);
+    }
+  },
+  updateLastMessageConversation: async (req, res, next) => {
+    try {
+      const {
+        conversationId,
+        message,
+      } = req.body;
+      console.log("updateLastMessageConversation :" + conversationId + " " + message)
+      const conversation = await Conversation.findOne({ numberId: conversationId });
+
+      if (conversation == null) return res.json(Response.error("không tìm thấy cuộc trò chuyện"));
+
+
+      await Conversation.updateOne(
+        { numberId: conversationId },
+        {
+          $set: {
+            textLastMessage: message,
+          }
+        }
+      );
+      return res.json(Response.success(null, req.t('product.updated')));
+
+
+    } catch (err) {
+      console.error(err);
+      return next(err);
+    }
+  },
   createProduct: async (req, res, next) => {
     try {
       const {
@@ -590,3 +763,11 @@ export default {
     }
   }
 };
+// Function to generate a random integer within a specified range
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Example: Generate a random integer between 1 and 10
