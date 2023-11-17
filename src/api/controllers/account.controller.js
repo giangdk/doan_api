@@ -32,26 +32,26 @@ export default {
   },
   updateMe: async (req, res, next) => {
     try {
-      const { fullName, dateOfBirth, email, biography, gender, avatar, username } = req.body;
-
+      const { fullName, dateOfBirth, email, biography, gender, avatar } = req.body;
+      console.log("giang updateMe: ")
       let updateProfileQuery = {};
-      if (username != null) {
-        const checkExistsUsername = await Account.findOne({ username }).select('username');
-        if (checkExistsUsername) return res.json(Response.badRequest(req.t('username.exists')));
+      // if (username != null) {
+      //   // const checkExistsUsername = await Account.findOne({ username }).select('username');
+      //   // if (checkExistsUsername) return res.json(Response.badRequest(req.t('username.exists')));
 
-        const checkUsernameChanged = await Account.findOne({
-          _id: req.user._id
-        }).select('username');
+      //   const checkUsernameChanged = await Account.findOne({
+      //     _id: req.user._id
+      //   }).select('username');
 
-        if (checkUsernameChanged.authentication.isChanged)
-          return res.json(Response.badRequest(req.t('username.is.changed')));
+      //   if (checkUsernameChanged.authentication.isChanged)
+      //     return res.json(Response.badRequest(req.t('username.is.changed')));
 
-        updateProfileQuery = {
-          ...updateProfileQuery,
-          username,
-          'authentication.isChanged': true
-        };
-      }
+      //   updateProfileQuery = {
+      //     ...updateProfileQuery,
+      //     username,
+      //     'authentication.isChanged': true
+      //   };
+      // }
       if (fullName != null) {
         updateProfileQuery = {
           ...updateProfileQuery,
@@ -60,8 +60,8 @@ export default {
       }
 
       if (email != null) {
-        const isExistEmail = await Account.exists({ 'profile.email': email });
-        if (isExistEmail) return res.json(Response.badRequest(req.t('email.is.exists')));
+        // const isExistEmail = await Account.exists({ 'profile.email': email });
+        // if (isExistEmail) return res.json(Response.badRequest(req.t('email.is.exists')));
         updateProfileQuery = {
           ...updateProfileQuery,
           'profile.email': email
@@ -69,9 +69,10 @@ export default {
       }
 
       if (dateOfBirth != null) {
+        const myDate = new Date(dateOfBirth);
         updateProfileQuery = {
           ...updateProfileQuery,
-          'profile.dateOfBirth': dateOfBirth
+          'profile.dateOfBirth': myDate
         };
       }
 
@@ -95,6 +96,7 @@ export default {
           'profile.avatar': avatar
         };
       }
+      console.log("update account:" + updateProfileQuery)
       await Account.updateOne({ _id: req.user._id }, { $set: updateProfileQuery });
 
       return res.json(Response.success(req.t('profile.updated')));

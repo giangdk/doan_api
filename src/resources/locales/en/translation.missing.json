@@ -19,5 +19,8 @@
     "end": {
       "successfully": "livestream.end.successfully"
     }
+  },
+  "username": {
+    "exists": "username.exists"
   }
 }

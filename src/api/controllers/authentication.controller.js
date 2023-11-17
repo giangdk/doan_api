@@ -82,8 +82,10 @@ export default {
           const account = new Account({
             phone: phoneNumber,
             authentication: {
-              isPhoneVerified: true
+              isPhoneVerified: true,
+              isCreatedPassword: true,
             },
+            password: verification.password,
             'profile.fullName': verification.fullName
           });
           await account.save();
@@ -154,27 +156,27 @@ export default {
   register: async (req, res, next) => {
     try {
       const { phone, password, fullName, } = req.body;
-      
+
       const number = phoneUtil.parse(phone, 'VN');
       if (!phoneUtil.isValidNumber(number))
         return res.json(Response.badRequest(req.t('invalid.phone.number')));
-      
+
       const phoneNumber = phoneUtil.format(number, PhoneNumberFormat.E164);
-      
+
       const existAccount = await Account.findOne({ phone: phoneNumber });
-     
+
       if (existAccount) return res.json(Response.badRequest(req.t('already.exists.phone.number')));
-      
+
       const hashedPassword = bcrypt.hashSync(password, 8);
-      
+
       const account = {
         fullName,
         phone,
-        password: hashedPassword
+        password
       };
-      
+
       authService.generateOTPCode(account, otpTypeEnum.REGISTRATION);
-     
+
       return res.json(Response.success(null, req.t('otp.sent')));
     } catch (err) {
       console.log("9");
@@ -184,24 +186,25 @@ export default {
   },
 
   login: async (req, res, next) => {
-   
+
     try {
       const { phone, password } = req.body;
-     
+
       const number = phoneUtil.parse(phone, 'VN');
       if (!phoneUtil.isValidNumber(number))
         return res.json(Response.badRequest(req.t('invalid.phone.number')));
-       
+
       const phoneNum = phoneUtil.format(number, PhoneNumberFormat.E164);
-     
+
       const account = await Account.findOne({ phone: phoneNum }).select('+password');
-      
+
       if (!account) return res.json(Response.badRequest(req.t('login.not.exists.phone.number')));
-      
+
       if (!account.authentication.isCreatedPassword)
         return res.json(Response.badRequest(req.t('password.is.not.created'), 'isCreatPassword'));
-      const isValidPassword = await account.passwordMatches(password);
-      console.log("login6")
+      // const isValidPassword = await account.passwordMatches(password);
+      const isValidPassword = password === account.password
+      console.log("login6" + isValidPassword)
       if (!isValidPassword) return res.json(Response.badRequest(req.t('invalid.credentials')));
       console.log("login7")
       const token = jwt.sign({ id: account._id }, vars.jwtSecret, {

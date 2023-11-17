@@ -3,7 +3,7 @@ import { body } from 'express-validator';
 const updateProfileRules = () => [
   body('fullName').if(body('fullName').notEmpty()).isString(),
   body('username').if(body('username').notEmpty()).isString(),
-  body('dateOfBirth').if(body('dateOfBirth').notEmpty()).isDate(),
+  // body('dateOfBirth').if(body('dateOfBirth').notEmpty()).isDate(),
   body('email').if(body('email').notEmpty()).isEmail(),
   body('biography').if(body('biography').notEmpty()).isString(),
   body('gender').if(body('gender').notEmpty()).isString(),

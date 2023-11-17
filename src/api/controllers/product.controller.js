@@ -198,6 +198,12 @@ export default {
         ownerId,
         guestId,
       } = req.body;
+      console.log("giang createConversation: " + ownerId + " " + guestId + (ownerId === guestId))
+      if (ownerId === guestId) return res.json(
+        Response.error("Cuộc hội thoại lỗi")
+      );
+      console.log("giang createConversation: " + ownerId + " " + guestId)
+
       const owner = await Account.findOne({ _id: ownerId });
       var ownerNumberId;
       if (owner.numberId == null) {
@@ -215,22 +221,41 @@ export default {
         guestNumberId = guest.numberId;
       }
       const numberId = getRandomInt(1, 9999999);
+      var conversation = await Conversation.findOne({
+        $or: [
+          { ownerId: owner._id },
+          { guestId: guest._id, },
+        ],
+      });
+      console.log("giang createConversation:" + conversation)
+      if (conversation == null) {
+        conversation = await Conversation.findOne({
+          $or: [
+            { ownerId: guest._id },
+            { guestId: owner._id },
+          ],
+        });
+      }
+      if (conversation == null) {
+        await Conversation.create({
+          numberId: numberId,
+          name: guest.name,
+          myLastSeen: 0,
+          ownerId: owner._id,
+          guestId: guest._id,
+          textLastMessage: "hello",
 
-      await Conversation.create({
-        numberId: numberId,
-        name: guest.name,
-        myLastSeen: 0,
-        ownerId: owner._id,
-        guestId: guest._id,
-        textLastMessage: "hello",
-
-      })
-
+        });
+        return res.json(
+          Response.success(
+            "Tạo cuộc hội thoại thành công"
+          )
+        );
+      }
       return res.json(
-        Response.success({
-
-        })
+        Response.error("Cuộc hội thoại đã tồn tại")
       );
+
     } catch (err) {
       console.error(err);
       return next(err);
