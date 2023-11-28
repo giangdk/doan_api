@@ -17,6 +17,10 @@ export default {
     uri:
       process.env.NODE_ENV === 'development' ? process.env.MONGO_URI_TESTS : process.env.MONGO_URI
   },
+  redis: {
+    uri:
+      process.env.REDIS_URI
+  },
   jwtSecret: process.env.JWT_SECRET,
   logs: process.env.NODE_ENV === 'production' ? 'combined' : 'dev',
   goong: process.env.GOONG_API_KEY,

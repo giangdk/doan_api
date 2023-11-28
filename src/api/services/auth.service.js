@@ -1,8 +1,9 @@
 import Redis from 'redis';
 import OtpGenerator from 'otp-generator';
 import otpTypeEnum from '../enums/otpType.enum.js';
+import vars from '../../config/vars.js';
 
-const redisClient = Redis.createClient();
+const redisClient = Redis.createClient({ url: vars.redis.uri });
 
 const Service = {
   generateRegisterOtp(account, prefix = otpTypeEnum.LOGIN) {

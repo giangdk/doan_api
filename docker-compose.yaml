@@ -1,0 +1,54 @@
+version: '3.9'
+services:
+  web_service:
+   build:
+     context: .
+     dockerfile: Dockerfile
+   container_name: mubaha
+   restart: always
+   ports:
+     - "9100:3000"
+   depends_on:
+     mongo:
+       condition: service_healthy
+   ulimits:
+     nofile:
+       soft: 65535
+       hard: 65535
+   environment:
+     NODE_ENV: production
+     PORT: 3000
+     REDIS_URI: redis://redis:6379
+     MONGO_URI: mongodb://mongo:27017/mubahaappdev
+     MONGO_URI_TESTS: mongodb://mongo:27017/mubahaappdev
+     CDN_URL: https://laka-storage-vn.hn.ss.bfcplatform.vn
+     JWT_SECRET: qwr309098y@@jasofiaovajlASJasfjklfqjwg01324asd
+     GOONG_API_KEY: k8kybVhYKY8h7lEtLEw0pIO6N7LBDVe9kV3krk4y
+     S3_ACCESS_KEY: 1JUTJUZP039U0O1I2II0
+     S3_SECRET_KEY: jX3VghCWTZJX0rc4F5SA4AvAgPHdKGLbpV2IjXKj
+     S3_URL: https://mubaha.hn.ss.bfcplatform.vn
+     S3_BUCKET_NAME: mubaha
+   healthcheck:
+     test:  netstat -ltn | grep -c 3000
+     interval: 600s
+     timeout: 10s
+     retries: 5
+     start_period: 2s
+
+  mongo:
+    image: mongo
+    restart: always
+    container_name: mongo-mubaha
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    healthcheck:
+      test:  echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 20s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+
+  redis:
+    image: redis:7.2
+    
