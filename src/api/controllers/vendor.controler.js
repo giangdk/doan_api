@@ -248,12 +248,19 @@ export default {
     }
   },
   updateProfile: async (req, res, next) => {
-    const { brandName, description, images } = req.body;
+    const { brandName, description, images, avatar } = req.body;
+    console.log("giang updateProfile" + brandName + description + images + avatar)
     let updateQuery = {};
     if (brandName) {
       updateQuery = {
         ...updateQuery,
         brandName
+      };
+    }
+    if (avatar) {
+      updateQuery = {
+        ...updateQuery,
+        avatar
       };
     }
     if (description) {

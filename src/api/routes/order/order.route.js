@@ -508,7 +508,52 @@ router.route('/:id/transit').put(updateStatusOrderRules(), validate, async (req,
     return next(e);
   }
 });
+router.route('/:id/success').put(updateStatusOrderRules(), validate, async (req, res, next) => {
+  try {
+    const isUser = await Account.exists({ _id: req.user._id });
 
+    console.log("/:id/success " + isUser)
+    if (!isUser) return res.json(Response.notFound());
+
+    const { id } = req.params;
+
+    const { reason } = req.body;
+    console.log("/:id/success 1")
+    const order = await Order.findOne({
+      _id: id,
+      // status: { $in: [orderStatusEnum.PICKUP_AVAILABLE, orderStatusEnum.AWAITING_CONFIRMATION] }
+    });
+    console.log("/:id/success " + order)
+    if (!order) return res.json(Response.badRequest(req.t('order.cannot.cancel')));
+
+    async
+      .parallel({
+        activity: (cb) => {
+          OrderActivity.create({
+            order: order._id,
+            issuer: req.user._id,
+            state: activityState.ORDER_DELIVERED,
+            reason: reason
+          }).then((resp) => cb(null, resp));
+        },
+        orderUpdate: (cb) => {
+          Order.findByIdAndUpdate(id, {
+            $set: {
+              // listType: orderListTypeEnum.CANCELLED_TORESPONSE,
+              status: orderStatusEnum.DELIVERED
+            }
+          }).then((resp) => cb(null, resp));
+        }
+      })
+      .then((result) => {
+        const { orderUpdate } = result;
+        return res.json(Response.success({ _id: id }, null));
+      });
+  } catch (e) {
+    console.log(e);
+    return next(e);
+  }
+});
 router.route('/:id/cancel').put(updateStatusOrderRules(), validate, async (req, res, next) => {
   try {
     const isUser = await Account.exists({ _id: req.user._id });
@@ -725,7 +770,7 @@ router.route('/shop-manager-order').get(async (req, res, next) => {
     const { limit, page, status, t } = req.query;
     const options = {
       page: parseInt(page) || 1,
-      limit: parseInt(limit) || 20,
+      limit: parseInt(limit) || 100,
       populate: [
         {
           path: 'vendor',
@@ -788,7 +833,7 @@ router.route('/listing').get(async (req, res, next) => {
     const { limit, page, status, t } = req.query;
     const options = {
       page: parseInt(page) || 1,
-      limit: parseInt(limit) || 20,
+      limit: parseInt(limit) || 100,
       populate: [
         {
           path: 'vendor',
