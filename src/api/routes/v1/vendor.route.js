@@ -16,7 +16,7 @@ const router = Router();
 router
   .route('/profile')
   .get(authorize(accountTypeEnum.VENDOR), validate, vendor.getProfile)
-  .put(authorize(accountTypeEnum.VENDOR), updateProfileRules(), validate, vendor.updateProfile);
+  .put(authorize(accountTypeEnum.VENDOR), vendor.updateProfile);
 
 router
   .route('/apply')
