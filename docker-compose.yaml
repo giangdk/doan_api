@@ -39,9 +39,10 @@ services:
     image: mongo
     restart: always
     container_name: mongo-mubaha
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - type: bind
+        source: ./mongodata
+        target: /data/db
     healthcheck:
       test:  echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
       interval: 20s
