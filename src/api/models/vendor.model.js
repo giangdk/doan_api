@@ -43,6 +43,12 @@ const vendorSchema = new Schema(
     brandName: {
       type: String
     },
+    cliendIdPaypal: {
+      type: String
+    },
+    secretPaypal: {
+      type: String
+    },
     followers: {
       type: Number,
       default: 0

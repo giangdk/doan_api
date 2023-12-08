@@ -248,8 +248,8 @@ export default {
     }
   },
   updateProfile: async (req, res, next) => {
-    const { brandName, description, images, avatar } = req.body;
-    console.log("giang updateProfile" + brandName + description + images + avatar)
+    const { brandName, description, images, avatar, cliendIdPaypal, secretPaypal } = req.body;
+    console.log("giang updateProfile" + brandName + description + images + avatar + " " + cliendIdPaypal + " " + secretPaypal)
     let updateQuery = {};
     if (brandName) {
       updateQuery = {
@@ -261,6 +261,19 @@ export default {
       updateQuery = {
         ...updateQuery,
         avatar
+      };
+    }
+
+    if (cliendIdPaypal) {
+      updateQuery = {
+        ...updateQuery,
+        cliendIdPaypal
+      };
+    }
+    if (secretPaypal) {
+      updateQuery = {
+        ...updateQuery,
+        secretPaypal
       };
     }
     if (description) {
