@@ -97,95 +97,90 @@ export default {
       var conversation = await Conversation.find({
         ownerId: user._id,
       });
+      var listConversation = []
       console.log("giang getConversation1 : ", conversation.length)
-      if (conversation.length > 0) {
-        var listConversation = []
-        for (const element of conversation) {
-          var owner = await Account.findById(element.ownerId)
-          var guest = await Account.findById(element.guestId)
-          console.log("giang getConversation: ", guest)
-          listConversation.push({
-            "id": element.numberId,
-            "name": guest.profile.fullName,
-            "type": element.type,
-            "myLastSeen": element.myLastSeen,
-            "lastMessage": {
-              "id": 1,
-              "conversationId": 1,
-              "timestamp": 1,
-              "refId": 1,
-              "content": {
-                "type": "TEXT",
-                "text": element.textLastMessage ?? "hello"
-              }
-            },
-            "members": [
-              {
-                "username": owner.profile.fullName,
-                "globalId": owner.numberId,
-                "fullname": owner.profile.fullName,
-                "avatar": owner.profile.avatar
-              }, {
-                "username": guest.profile.fullName,
-                "globalId": guest.numberId,
-                "fullname": guest.profile.fullName,
-                "avatar": guest.profile.avatar
-              }
-            ]
-          })
-        }
-        return res.json(
-          Response.success({
-            listConversation,
-          })
-        );
-      } else {
-        conversation = await Conversation.find({
-          guestId: user._id,
-        });
-        console.log("giang getConversation2 : ", conversation)
-        var listConversation = []
-        for (const element of conversation) {
-          var owner = await Account.findById(element.guestId)
-          var guest = await Account.findById(element.ownerId)
 
-          console.log("giang getConversation guestId2: ", guest)
-          listConversation.push({
-            "id": element.numberId,
-            "name": guest.profile.fullName,
-            "type": element.type,
-            "myLastSeen": element.myLastSeen,
-            "lastMessage": {
-              "id": 1,
-              "conversationId": 1,
-              "timestamp": 1,
-              "refId": 1,
-              "content": {
-                "type": "TEXT",
-                "text": element.textLastMessage ?? "hello"
-              }
-            },
-            "members": [
-              {
-                "username": owner.profile.fullName,
-                "globalId": owner.numberId,
-                "fullname": owner.profile.fullName,
-                "avatar": owner.profile.avatar
-              }, {
-                "username": guest.profile.fullName,
-                "globalId": guest.numberId,
-                "fullname": guest.profile.fullName,
-                "avatar": guest.profile.avatar
-              }
-            ]
-          })
-        }
-        return res.json(
-          Response.success({
-            listConversation,
-          })
-        );
+
+      for (const element of conversation) {
+        var owner = await Account.findById(element.ownerId)
+        var guest = await Account.findById(element.guestId)
+        console.log("giang getConversation: ", guest)
+        listConversation.push({
+          "id": element.numberId,
+          "name": guest.profile.fullName,
+          "type": element.type,
+          "myLastSeen": element.myLastSeen,
+          "lastMessage": {
+            "id": 1,
+            "conversationId": 1,
+            "timestamp": 1,
+            "refId": 1,
+            "content": {
+              "type": "TEXT",
+              "text": element.textLastMessage ?? "hello"
+            }
+          },
+          "members": [
+            {
+              "username": owner.profile.fullName,
+              "globalId": owner.numberId,
+              "fullname": owner.profile.fullName,
+              "avatar": owner.profile.avatar
+            }, {
+              "username": guest.profile.fullName,
+              "globalId": guest.numberId,
+              "fullname": guest.profile.fullName,
+              "avatar": guest.profile.avatar
+            }
+          ]
+        })
       }
+
+      conversation = await Conversation.find({
+        guestId: user._id,
+      });
+      console.log("giang getConversation2 : ", conversation)
+      for (const element of conversation) {
+        var owner = await Account.findById(element.guestId)
+        var guest = await Account.findById(element.ownerId)
+
+        console.log("giang getConversation guestId2: ", guest)
+        listConversation.push({
+          "id": element.numberId,
+          "name": guest.profile.fullName,
+          "type": element.type,
+          "myLastSeen": element.myLastSeen,
+          "lastMessage": {
+            "id": 1,
+            "conversationId": 1,
+            "timestamp": 1,
+            "refId": 1,
+            "content": {
+              "type": "TEXT",
+              "text": element.textLastMessage ?? "hello"
+            }
+          },
+          "members": [
+            {
+              "username": owner.profile.fullName,
+              "globalId": owner.numberId,
+              "fullname": owner.profile.fullName,
+              "avatar": owner.profile.avatar
+            }, {
+              "username": guest.profile.fullName,
+              "globalId": guest.numberId,
+              "fullname": guest.profile.fullName,
+              "avatar": guest.profile.avatar
+            }
+          ]
+        })
+      }
+      return res.json(
+        Response.success({
+          listConversation,
+        })
+      );
+
 
     } catch (err) {
       console.error(err);
@@ -205,6 +200,7 @@ export default {
       console.log("giang createConversation: " + ownerId + " " + guestId)
 
       const owner = await Account.findOne({ _id: ownerId });
+
       var ownerNumberId;
       if (owner.numberId == null) {
         ownerNumberId = getRandomInt(1, 9999999);
@@ -213,6 +209,7 @@ export default {
         ownerNumberId = owner.numberId;
       }
       const guest = await Account.findOne({ _id: guestId });
+
       var guestNumberId;
       if (guest.numberId == null) {
         guestNumberId = getRandomInt(1, 9999999);
@@ -221,21 +218,26 @@ export default {
         guestNumberId = guest.numberId;
       }
       const numberId = getRandomInt(1, 9999999);
+
+
       var conversation = await Conversation.findOne({
-        $or: [
-          { ownerId: owner._id },
-          { guestId: guest._id, },
-        ],
+        ownerId: owner._id, guestId: guest._id,
+        // $or: [
+        //   { ownerId: owner._id },
+        //   { guestId: guest._id, },
+        // ],
       });
       console.log("giang createConversation:" + conversation)
       if (conversation == null) {
         conversation = await Conversation.findOne({
-          $or: [
-            { ownerId: guest._id },
-            { guestId: owner._id },
-          ],
+          ownerId: guest._id, guestId: owner._id
+          // $or: [
+          //   { ownerId: guest._id },
+          //   { guestId: owner._id },
+          // ],
         });
       }
+      console.log("giang createConversation:" + conversation)
       if (conversation == null) {
         await Conversation.create({
           numberId: numberId,

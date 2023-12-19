@@ -107,7 +107,7 @@ router.get('/checkout', getCheckoutRules(), validate, async (req, res, next) => 
             })
             .populate({
               path: 'vendor',
-              select: 'brandName',
+              select: 'brandName cliendIdPaypal secretPaypal',
               populate: {
                 path: 'owner',
                 select: 'username profile.avatar'
@@ -138,7 +138,7 @@ router.get('/checkout', getCheckoutRules(), validate, async (req, res, next) => 
           });
 
           totalOrdersPrice += totalPrice;
-
+          console.log("giang vendor : " + products[0].vendor);
           return {
             vendor: products[0].vendor,
             products: products,
